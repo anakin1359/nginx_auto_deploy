@@ -1,0 +1,48 @@
+#==============================
+# Hosts
+#==============================
+[system1]
+web01 ansible_host=172.20.34.165
+web02 ansible_host=172.20.34.166
+
+[system2]
+web03 ansible_host=172.20.34.168
+web04 ansible_host=172.20.34.169
+
+[system3]
+# db01 ansible_host=172.20.34.175
+# db02 ansible_host=172.20.34.176
+
+
+# ==============================
+# Children
+# ==============================
+[dc_tokyo:children]
+system1
+system2
+
+[dc_osaka:children]
+system3
+
+[web:children]
+system1
+system2
+
+[db:children]
+system3
+
+
+# ==============================
+# Vars
+# ==============================
+[system1:vars]
+system=system_1
+ansible_ssh_pass=pass
+
+[system2:vars]
+system=system_2
+ansible_ssh_pass=pass
+
+[system3:vars]
+system=system_3
+ansible_ssh_pass=pass

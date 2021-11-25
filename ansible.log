@@ -1,0 +1,82 @@
+2021-11-25 21:26:43,697 p=32761 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-11-25 21:26:43,698 p=32761 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system1
+
+2021-11-25 21:27:27,294 p=339 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-11-25 21:27:27,294 p=339 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system2
+
+2021-11-25 21:27:50,193 p=435 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-11-25 21:27:50,193 p=435 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system2
+
+2021-11-25 21:27:55,082 p=459 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-11-25 21:27:55,082 p=459 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system1
+
+2021-11-25 21:54:19,767 p=542 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-11-25 21:54:19,768 p=542 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system1
+
+2021-11-25 21:55:11,719 p=621 u=root n=ansible | web01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:55:11,728 p=621 u=root n=ansible | web02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:55:31,092 p=757 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system[1
+
+2021-11-25 21:55:31,092 p=757 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: 2]
+
+2021-11-25 21:55:31,093 p=757 u=root n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2021-11-25 21:55:39,247 p=784 u=root n=ansible | web04 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:55:39,261 p=784 u=root n=ansible | web03 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:55:47,044 p=862 u=root n=ansible | web01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:55:47,049 p=862 u=root n=ansible | web02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:58:10,847 p=1003 u=root n=ansible | web01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:58:10,861 p=1003 u=root n=ansible | web02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
