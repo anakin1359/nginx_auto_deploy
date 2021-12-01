@@ -33,4 +33,9 @@
     shell: sed -i -e "s/ip-add:80/$(hostname -I |awk '{print $1}'):80/g" /etc/nginx/conf.d/default.conf
     ignore_errors: yes
 
-
+  - name: nginxの再起動
+    systemd:
+      name: nginx.service
+      state: started
+      enabled: yes
+    ignore_errors: yes
