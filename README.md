@@ -37,7 +37,12 @@ Author Information
 
 An optional section for the role authors to include contact information, or a website (HTML is not allowed).
 # nginx_auto_deploy
-
+* Connection test
 ```
 ansible system1 -m ping -i hosts/develop_nginx_server
+```
+
+* Run the playbook
+```
+ansible-playbook -i hosts/develop_nginx_server nginx.yml --step
 ```
