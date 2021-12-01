@@ -1,0 +1,18 @@
+---
+- name: utilityツールをインストール
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ utility_packages }}"
+
+- name: nginx.repoを転送
+  copy:
+    src: roles/nginx/file/nginx.repo
+    dest: /etc/yum.repos.d/
+    mode: 644
+
+- name: nginxをインストール
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ nginx_packages }}"

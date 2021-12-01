@@ -4,5 +4,5 @@
     tags: [ ansible_env ]
 
   - name: ライブラリの設定（インストール）
-    import_tasks: install_packages.yml
-    tags: [ install_packages ]
+    import_tasks: setup_nginx.yml
+    tags: [ setup_nginx ]
