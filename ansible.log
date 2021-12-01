@@ -80,3 +80,13 @@
     "changed": false, 
     "ping": "pong"
 }
+2021-12-01 12:10:45,648 p=11306 u=root |  web01 | SUCCESS => {
+    "changed": false, 
+    "failed": false, 
+    "ping": "pong"
+}
+2021-12-01 12:10:45,662 p=11306 u=root |  web02 | SUCCESS => {
+    "changed": false, 
+    "failed": false, 
+    "ping": "pong"
+}
