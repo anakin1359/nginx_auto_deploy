@@ -1,6 +1,9 @@
 ---
 - name: 作業用ユーザ作成
-  user: name=ansible
+  user:
+    name: ansible
+    shell: /bin/bash
+    state: present
 
 - name: 作業ディレクトリ作成
   file:
@@ -15,6 +18,7 @@
     path: /etc/selinux/config
     regexp: '^SELINUX=enforcing'
     replace: SELINUX=disabled
+    backup: yes
 
 - name: firewalld停止
   systemd:

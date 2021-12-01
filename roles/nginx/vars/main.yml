@@ -1,2 +1,19 @@
 ---
-# vars file for nginx_auto_deploy
+utility_packages:
+  - yum-utils
+  - telnet
+  - vim-enhanced
+  - bind-utils
+  - net-tools
+  - nmap
+  - psmisc
+  - rlwrap
+  - traceroute
+  - tree
+  - wget
+  - open-vm-tools
+
+# repository_rpm:
+
+nginx_packages:
+  - nginx

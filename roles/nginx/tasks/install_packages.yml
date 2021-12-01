@@ -1,0 +1,8 @@
+---
+- name: utilityツールをインストール
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ utility_packages }}"
+
+# - name: nginx.repoの編集

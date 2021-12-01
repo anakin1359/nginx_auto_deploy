@@ -1,4 +1,8 @@
 ---
-- name: Ansible実行環境設定
-  import_tasks: ansible_env.yml
-  tags: [ ansible_env ]
+  - name: Ansible実行環境設定
+    import_tasks: ansible_env.yml
+    tags: [ ansible_env ]
+
+  - name: ライブラリの設定（インストール）
+    import_tasks: install_packages.yml
+    tags: [ install_packages ]

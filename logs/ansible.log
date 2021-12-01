@@ -1,0 +1,482 @@
+2021-11-25 21:26:43,697 p=32761 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-11-25 21:26:43,698 p=32761 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system1
+
+2021-11-25 21:27:27,294 p=339 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-11-25 21:27:27,294 p=339 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system2
+
+2021-11-25 21:27:50,193 p=435 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-11-25 21:27:50,193 p=435 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system2
+
+2021-11-25 21:27:55,082 p=459 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-11-25 21:27:55,082 p=459 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system1
+
+2021-11-25 21:54:19,767 p=542 u=root n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2021-11-25 21:54:19,768 p=542 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system1
+
+2021-11-25 21:55:11,719 p=621 u=root n=ansible | web01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:55:11,728 p=621 u=root n=ansible | web02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:55:31,092 p=757 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: system[1
+
+2021-11-25 21:55:31,092 p=757 u=root n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: 2]
+
+2021-11-25 21:55:31,093 p=757 u=root n=ansible | [WARNING]: No hosts matched, nothing to do
+
+2021-11-25 21:55:39,247 p=784 u=root n=ansible | web04 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:55:39,261 p=784 u=root n=ansible | web03 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:55:47,044 p=862 u=root n=ansible | web01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:55:47,049 p=862 u=root n=ansible | web02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:58:10,847 p=1003 u=root n=ansible | web01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-11-25 21:58:10,861 p=1003 u=root n=ansible | web02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-12-01 12:10:45,648 p=11306 u=root |  web01 | SUCCESS => {
+    "changed": false, 
+    "failed": false, 
+    "ping": "pong"
+}
+2021-12-01 12:10:45,662 p=11306 u=root |  web02 | SUCCESS => {
+    "changed": false, 
+    "failed": false, 
+    "ping": "pong"
+}
+2021-12-01 12:24:30,642 p=11850 u=root |   [WARNING]: Unable to parse /root/nginx_auto_deploy/host as an inventory source
+
+2021-12-01 12:24:30,643 p=11850 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-12-01 12:24:30,644 p=11850 u=root |   [WARNING]: Could not match supplied host pattern, ignoring: all
+
+2021-12-01 12:24:30,644 p=11850 u=root |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2021-12-01 12:24:30,661 p=11850 u=root |  ERROR! the role 'nginx' was not found in /root/nginx_auto_deploy/roles:/root/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/root/nginx_auto_deploy
+
+The error appears to have been in '/root/nginx_auto_deploy/nginx.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - nginx
+      ^ here
+
+2021-12-01 12:25:03,531 p=11883 u=root |   [WARNING]: Unable to parse /root/nginx_auto_deploy/host as an inventory source
+
+2021-12-01 12:25:03,531 p=11883 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-12-01 12:25:03,532 p=11883 u=root |   [WARNING]: Could not match supplied host pattern, ignoring: all
+
+2021-12-01 12:25:03,533 p=11883 u=root |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2021-12-01 12:25:03,549 p=11883 u=root |  ERROR! the role 'nginx' was not found in /root/nginx_auto_deploy/roles:/root/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/root/nginx_auto_deploy
+
+The error appears to have been in '/root/nginx_auto_deploy/nginx.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - nginx
+      ^ here
+
+2021-12-01 12:27:06,619 p=11926 u=root |   [WARNING]: Unable to parse /root/nginx_auto_deploy/host as an inventory source
+
+2021-12-01 12:27:06,620 p=11926 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-12-01 12:27:06,621 p=11926 u=root |   [WARNING]: Could not match supplied host pattern, ignoring: all
+
+2021-12-01 12:27:06,621 p=11926 u=root |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2021-12-01 12:27:06,637 p=11926 u=root |  ERROR! the role 'nginx' was not found in /root/nginx_auto_deploy/roles:/root/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/root/nginx_auto_deploy
+
+The error appears to have been in '/root/nginx_auto_deploy/nginx.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - nginx
+      ^ here
+
+2021-12-01 12:27:42,572 p=11977 u=root |   [WARNING]: Unable to parse /root/nginx_auto_deploy/host as an inventory source
+
+2021-12-01 12:27:42,572 p=11977 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-12-01 12:27:42,573 p=11977 u=root |   [WARNING]: Could not match supplied host pattern, ignoring: all
+
+2021-12-01 12:27:42,574 p=11977 u=root |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2021-12-01 12:27:42,590 p=11977 u=root |  ERROR! the role 'nginx' was not found in /root/nginx_auto_deploy/roles:/root/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/root/nginx_auto_deploy
+
+The error appears to have been in '/root/nginx_auto_deploy/nginx.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - nginx
+      ^ here
+
+2021-12-01 12:28:50,775 p=12063 u=root |   [WARNING]: Unable to parse /root/nginx_auto_deploy/host as an inventory source
+
+2021-12-01 12:28:50,776 p=12063 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-12-01 12:28:50,777 p=12063 u=root |   [WARNING]: Could not match supplied host pattern, ignoring: all
+
+2021-12-01 12:28:50,777 p=12063 u=root |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2021-12-01 12:28:50,790 p=12063 u=root |  ERROR! the role 'nginx' was not found in /root/nginx_auto_deploy/roles:/root/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/root/nginx_auto_deploy
+
+The error appears to have been in '/root/nginx_auto_deploy/nginx.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - nginx
+      ^ here
+
+2021-12-01 12:32:19,101 p=12198 u=root |   [WARNING]: Could not match supplied host pattern, ignoring: hosts/develop_nginx_server
+
+2021-12-01 12:32:19,101 p=12198 u=root |   [WARNING]: No hosts matched, nothing to do
+
+2021-12-01 12:34:13,519 p=12305 u=root |  ERROR! the playbook: step could not be found
+2021-12-01 12:34:16,550 p=12329 u=root |  ERROR! You must specify a playbook file to run
+2021-12-01 12:34:19,922 p=12336 u=root |  ERROR! You must specify a playbook file to run
+2021-12-01 12:37:49,057 p=12496 u=root |  ERROR! You must specify a playbook file to run
+2021-12-01 12:37:53,844 p=12523 u=root |  ERROR! You must specify a playbook file to run
+2021-12-01 12:38:05,627 p=12573 u=root |  ERROR! You must specify a playbook file to run
+2021-12-01 12:38:07,935 p=12600 u=root |  ERROR! You must specify a playbook file to run
+2021-12-01 12:38:16,278 p=12642 u=root |  ERROR! You must specify a playbook file to run
+2021-12-01 12:55:43,026 p=12784 u=root |   [WARNING]: Unable to parse /root/nginx_auto_deploy/host as an inventory source
+
+2021-12-01 12:55:43,026 p=12784 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-12-01 12:55:43,027 p=12784 u=root |   [WARNING]: Could not match supplied host pattern, ignoring: all
+
+2021-12-01 12:55:43,028 p=12784 u=root |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2021-12-01 12:55:43,042 p=12784 u=root |  ERROR! the role 'nginx' was not found in /root/nginx_auto_deploy/roles:/root/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/root/nginx_auto_deploy
+
+The error appears to have been in '/root/nginx_auto_deploy/nginx.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - nginx
+      ^ here
+
+2021-12-01 12:56:33,130 p=12846 u=root |   [WARNING]: Unable to parse /root/nginx_auto_deploy/host as an inventory source
+
+2021-12-01 12:56:33,131 p=12846 u=root |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-12-01 12:56:33,132 p=12846 u=root |   [WARNING]: Could not match supplied host pattern, ignoring: all
+
+2021-12-01 12:56:33,132 p=12846 u=root |   [WARNING]: provided hosts list is empty, only localhost is available
+
+2021-12-01 12:56:33,148 p=12846 u=root |  ERROR! the role 'nginx' was not found in /root/nginx_auto_deploy/roles:/root/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/root/nginx_auto_deploy
+
+The error appears to have been in '/root/nginx_auto_deploy/nginx.yml': line 6, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - nginx
+      ^ here
+
+2021-12-01 13:22:53,909 p=14689 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-01 13:22:57,273 p=14689 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-01 13:22:57,278 p=14689 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-01 13:22:58,275 p=14689 u=root |  ok: [web01]
+2021-12-01 13:23:02,211 p=14689 u=root |  Perform task: TASK: nginx : 作業用ユーザ作成 (N)o/(y)es/(c)ontinue: *********************************************************************************************************************************************************************
+2021-12-01 13:23:02,217 p=14689 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-01 13:23:02,900 p=14689 u=root |  ok: [web01]
+2021-12-01 13:23:55,170 p=14689 u=root |  Perform task: TASK: nginx : 作業ディレクトリ作成 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 13:23:55,176 p=14689 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-01 13:23:55,663 p=14689 u=root |  changed: [web01]
+2021-12-01 13:24:40,248 p=14689 u=root |  Perform task: TASK: nginx : SELinux無効化 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 13:24:40,255 p=14689 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-01 13:24:40,737 p=14689 u=root |  changed: [web01]
+2021-12-01 13:25:54,898 p=14689 u=root |  Perform task: TASK: nginx : firewalld停止 (N)o/(y)es/(c)ontinue: ******************************************************************************************************************************************************************
+2021-12-01 13:25:54,906 p=14689 u=root |  TASK [nginx : firewalld停止] ******************************************************************************************************************************************************************************************************
+2021-12-01 13:25:55,903 p=14689 u=root |  changed: [web01]
+2021-12-01 13:25:55,906 p=14689 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-01 13:25:55,907 p=14689 u=root |  web01                      : ok=5    changed=3    unreachable=0    failed=0   
+2021-12-01 13:50:05,289 p=15298 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/main.yml': line 6, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: ライブラリの設定（インストール）
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/main.yml': line 6, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: ライブラリの設定（インストール）
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/main.yml': line 6, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: ライブラリの設定（インストール）
+  ^ here
+
+2021-12-01 13:50:55,151 p=15375 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/main.yml': line 6, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: ライブラリの設定（インストール）
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/main.yml': line 6, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: ライブラリの設定（インストール）
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/main.yml': line 6, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: ライブラリの設定（インストール）
+  ^ here
+
+2021-12-01 13:51:27,692 p=15421 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/main.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: ライブラリの設定（インストール）
+    ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/main.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: ライブラリの設定（インストール）
+    ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/main.yml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: ライブラリの設定（インストール）
+    ^ here
+
+2021-12-01 13:51:45,270 p=15463 u=root |  playbook: nginx.yml
+2021-12-01 13:53:17,780 p=15525 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-01 13:53:17,793 p=15525 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-01 13:53:18,797 p=15525 u=root |  ok: [web01]
+2021-12-01 13:53:18,804 p=15525 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-01 13:53:19,373 p=15525 u=root |  ok: [web01]
+2021-12-01 13:53:19,380 p=15525 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-01 13:53:19,868 p=15525 u=root |  ok: [web01]
+2021-12-01 13:53:19,875 p=15525 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-01 13:53:20,359 p=15525 u=root |  ok: [web01]
+2021-12-01 13:53:20,367 p=15525 u=root |  TASK [nginx : firewalld停止] ******************************************************************************************************************************************************************************************************
+2021-12-01 13:53:20,875 p=15525 u=root |  ok: [web01]
+2021-12-01 13:53:20,882 p=15525 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-01 13:53:39,109 p=15525 u=root |  changed: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 13:53:39,110 p=15525 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-01 13:53:39,111 p=15525 u=root |  web01                      : ok=6    changed=1    unreachable=0    failed=0   
+2021-12-01 13:57:16,506 p=15725 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-01 13:57:16,519 p=15725 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-01 13:57:17,542 p=15725 u=root |  ok: [web01]
+2021-12-01 13:57:17,549 p=15725 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-01 13:57:18,129 p=15725 u=root |  ok: [web01]
+2021-12-01 13:57:18,137 p=15725 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-01 13:57:18,634 p=15725 u=root |  ok: [web01]
+2021-12-01 13:57:18,642 p=15725 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-01 13:57:19,141 p=15725 u=root |  ok: [web01]
+2021-12-01 13:57:19,148 p=15725 u=root |  TASK [nginx : firewalld停止] ******************************************************************************************************************************************************************************************************
+2021-12-01 13:57:19,668 p=15725 u=root |  ok: [web01]
+2021-12-01 13:57:19,676 p=15725 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-01 13:57:31,969 p=15725 u=root |  changed: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 13:57:31,971 p=15725 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-01 13:57:31,972 p=15725 u=root |  web01                      : ok=6    changed=1    unreachable=0    failed=0   
+2021-12-01 14:31:58,097 p=16005 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-01 14:31:58,110 p=16005 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-01 14:31:59,121 p=16005 u=root |  ok: [web01]
+2021-12-01 14:31:59,129 p=16005 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-01 14:31:59,708 p=16005 u=root |  ok: [web01]
+2021-12-01 14:31:59,717 p=16005 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-01 14:32:00,205 p=16005 u=root |  ok: [web01]
+2021-12-01 14:32:00,212 p=16005 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-01 14:32:00,699 p=16005 u=root |  ok: [web01]
+2021-12-01 14:32:00,707 p=16005 u=root |  TASK [nginx : firewalld停止] ******************************************************************************************************************************************************************************************************
+2021-12-01 14:32:01,220 p=16005 u=root |  ok: [web01]
+2021-12-01 14:32:01,227 p=16005 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-01 14:32:11,859 p=16005 u=root |  changed: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 14:32:11,861 p=16005 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-01 14:32:11,861 p=16005 u=root |  web01                      : ok=6    changed=1    unreachable=0    failed=0   
+2021-12-01 14:45:38,264 p=16225 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-01 14:45:41,212 p=16225 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-01 14:45:41,217 p=16225 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-01 14:45:42,228 p=16225 u=root |  ok: [web01]
+2021-12-01 14:45:44,404 p=16225 u=root |  Perform task: TASK: nginx : 作業用ユーザ作成 (N)o/(y)es/(c)ontinue: *********************************************************************************************************************************************************************
+2021-12-01 14:45:44,410 p=16225 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-01 14:45:44,985 p=16225 u=root |  ok: [web01]
+2021-12-01 14:45:45,892 p=16225 u=root |  Perform task: TASK: nginx : 作業ディレクトリ作成 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 14:45:45,899 p=16225 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-01 14:45:46,387 p=16225 u=root |  ok: [web01]
+2021-12-01 14:45:47,324 p=16225 u=root |  Perform task: TASK: nginx : SELinux無効化 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 14:45:47,330 p=16225 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-01 14:45:47,815 p=16225 u=root |  ok: [web01]
+2021-12-01 14:45:49,116 p=16225 u=root |  Perform task: TASK: nginx : firewalld停止 (N)o/(y)es/(c)ontinue: ******************************************************************************************************************************************************************
+2021-12-01 14:45:49,123 p=16225 u=root |  TASK [nginx : firewalld停止] ******************************************************************************************************************************************************************************************************
+2021-12-01 14:45:49,635 p=16225 u=root |  ok: [web01]
+2021-12-01 14:45:52,036 p=16225 u=root |  Perform task: TASK: nginx : utilityツールをインストール (N)o/(y)es/(c)ontinue: ************************************************************************************************************************************************************
+2021-12-01 14:45:52,043 p=16225 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-01 14:46:13,240 p=16225 u=root |  changed: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 14:46:13,242 p=16225 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-01 14:46:13,242 p=16225 u=root |  web01                      : ok=6    changed=1    unreachable=0    failed=0   
+2021-12-01 15:11:42,128 p=16632 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/install_packages.yml': line 8, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx.repoの編集
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/install_packages.yml': line 8, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx.repoの編集
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/install_packages.yml': line 8, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx.repoの編集
+  ^ here
+
+2021-12-01 15:11:52,029 p=16674 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-01 15:11:57,914 p=16674 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-01 15:11:57,919 p=16674 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-01 15:11:58,942 p=16674 u=root |  ok: [web02]
+2021-12-01 15:11:58,944 p=16674 u=root |  ok: [web01]
+2021-12-01 15:12:02,585 p=16674 u=root |  Perform task: TASK: nginx : 作業用ユーザ作成 (N)o/(y)es/(c)ontinue: *********************************************************************************************************************************************************************
+2021-12-01 15:12:02,591 p=16674 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-01 15:12:03,185 p=16674 u=root |  ok: [web01]
+2021-12-01 15:12:03,295 p=16674 u=root |  ok: [web02]
+2021-12-01 15:12:33,962 p=16674 u=root |  Perform task: TASK: nginx : 作業ディレクトリ作成 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 15:12:33,969 p=16674 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-01 15:12:34,476 p=16674 u=root |  ok: [web01]
+2021-12-01 15:12:34,479 p=16674 u=root |  changed: [web02]
+2021-12-01 15:12:43,802 p=16674 u=root |  Perform task: TASK: nginx : SELinux無効化 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 15:12:43,809 p=16674 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-01 15:12:44,314 p=16674 u=root |  ok: [web02]
+2021-12-01 15:12:44,316 p=16674 u=root |  ok: [web01]
+2021-12-01 15:12:46,666 p=16674 u=root |  Perform task: TASK: nginx : firewalld停止 (N)o/(y)es/(c)ontinue: ******************************************************************************************************************************************************************
+2021-12-01 15:12:46,673 p=16674 u=root |  TASK [nginx : firewalld停止] ******************************************************************************************************************************************************************************************************
+2021-12-01 15:12:47,202 p=16674 u=root |  ok: [web01]
+2021-12-01 15:12:47,554 p=16674 u=root |  ok: [web02]
+2021-12-01 15:12:49,857 p=16674 u=root |  Perform task: TASK: nginx : utilityツールをインストール (N)o/(y)es/(c)ontinue: ************************************************************************************************************************************************************
+2021-12-01 15:12:49,864 p=16674 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-01 15:12:56,771 p=16674 u=root |  ok: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 15:13:40,574 p=16674 u=root |  changed: [web02] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 15:13:40,576 p=16674 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-01 15:13:40,576 p=16674 u=root |  web01                      : ok=6    changed=0    unreachable=0    failed=0   
+2021-12-01 15:13:40,576 p=16674 u=root |  web02                      : ok=6    changed=2    unreachable=0    failed=0   
