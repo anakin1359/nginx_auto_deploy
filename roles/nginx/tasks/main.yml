@@ -3,6 +3,10 @@
     import_tasks: ansible_env.yml
     tags: [ ansible_env ]
 
-  - name: ライブラリの設定（インストール）
+  - name: nginxの設定
     import_tasks: setup_nginx.yml
     tags: [ setup_nginx ]
+  
+  - name: nginxの起動
+    import_tasks: startup_nginx.yml
+    tags: [ startup_nginx ]

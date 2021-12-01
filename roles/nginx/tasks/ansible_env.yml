@@ -1,27 +1,31 @@
 ---
-- name: 作業用ユーザ作成
-  user:
-    name: ansible
-    shell: /bin/bash
-    state: present
+  - name: 作業用ユーザ作成
+    user:
+      name: websrv
+      shell: /bin/bash
+      state: present
+    ignore_errors: yes
 
-- name: 作業ディレクトリ作成
-  file:
-    path: /tmp/WORKDIR
-    state: directory
-    owner: ansible
-    group: ansible
-    mode: 755
+  - name: 作業ディレクトリ作成
+    file:
+      path: /tmp/WORKDIR
+      state: directory
+      owner: websrv
+      group: websrv
+      mode: 755
+    ignore_errors: yes
 
-- name: SELinux無効化
-  replace:
-    path: /etc/selinux/config
-    regexp: '^SELINUX=enforcing'
-    replace: SELINUX=disabled
-    backup: yes
+  - name: SELinux無効化
+    replace:
+      path: /etc/selinux/config
+      regexp: '^SELINUX=enforcing'
+      replace: SELINUX=disabled
+      backup: yes
+    ignore_errors: yes
 
-- name: firewalld停止
-  systemd:
-    name: firewalld.service
-    state: stopped
-    enabled: no
+  - name: firewalld停止
+    systemd:
+      name: firewalld.service
+      state: stopped
+      enabled: no
+    ignore_errors: yes

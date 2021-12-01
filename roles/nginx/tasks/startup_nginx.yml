@@ -1,0 +1,19 @@
+---
+  - name: 公開用ディレクトリを作成
+    file:
+      path: /var/www/{{ inventory_hostname }}
+      state: directory
+      owner: websrv
+      group: websrv
+      mode: 755
+    ignore_errors: yes
+  
+  - name: topページ（index.html）を公開ディレクトリに配置
+    copy:
+      src: roles/nginx/file/index.html
+      dest: /var/www/{{ inventory_hostname }}
+    ignore_errors: yes
+
+  - name: 公開ディレクトリの権限を変更
+    shell: chown -R websrv:websrv /var/www/{{ inventory_hostname }}
+    ignore_errors: yes
