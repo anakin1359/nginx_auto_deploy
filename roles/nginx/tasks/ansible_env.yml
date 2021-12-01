@@ -1,0 +1,23 @@
+---
+- name: 作業用ユーザ作成
+  user: name=ansible
+
+- name: 作業ディレクトリ作成
+  file:
+    path: /tmp/WORKDIR
+    state: directory
+    owner: ansible
+    group: ansible
+    mode: 755
+
+- name: SELinux無効化
+  replace:
+    path: /etc/selinux/config
+    regexp: '^SELINUX=enforcing'
+    replace: SELINUX=disabled
+
+- name: firewalld停止
+  systemd:
+    name: firewalld.service
+    state: stopped
+    enabled: no

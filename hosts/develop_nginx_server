@@ -6,8 +6,8 @@ web01 ansible_host=172.20.34.165
 web02 ansible_host=172.20.34.166
 
 [system2]
-web03 ansible_host=172.20.34.168
-web04 ansible_host=172.20.34.169
+# web03 ansible_host=172.20.34.168
+# web04 ansible_host=172.20.34.169
 
 [system3]
 # db01 ansible_host=172.20.34.175

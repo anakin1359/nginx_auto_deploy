@@ -1,0 +1,6 @@
+---
+- name: nginx_auto_deploy
+  hosts: all
+  
+  roles:
+    - nginx
