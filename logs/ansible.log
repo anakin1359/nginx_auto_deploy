@@ -574,3 +574,520 @@ The offending line appears to be:
 2021-12-01 15:41:22,013 p=18855 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
 2021-12-01 15:41:22,013 p=18855 u=root |  web01                      : ok=8    changed=0    unreachable=0    failed=0   
 2021-12-01 15:41:22,013 p=18855 u=root |  web02                      : ok=8    changed=0    unreachable=0    failed=0   
+2021-12-01 16:15:41,397 p=19624 u=root |  ERROR! conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- nmae: nginx-mainline リポジトリを有効化
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- nmae: nginx-mainline リポジトリを有効化
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- nmae: nginx-mainline リポジトリを有効化
+  ^ here
+
+2021-12-01 16:16:30,073 p=19660 u=root |  ERROR! conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- nmae: nginx-mainline リポジトリを有効化
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- nmae: nginx-mainline リポジトリを有効化
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- nmae: nginx-mainline リポジトリを有効化
+  ^ here
+
+2021-12-01 16:16:33,498 p=19685 u=root |  ERROR! conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- nmae: nginx-mainline リポジトリを有効化
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- nmae: nginx-mainline リポジトリを有効化
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- nmae: nginx-mainline リポジトリを有効化
+  ^ here
+
+2021-12-01 16:16:48,571 p=19727 u=root |  ERROR! conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+2021-12-01 16:17:16,657 p=19769 u=root |  ERROR! conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+2021-12-01 16:17:36,095 p=19816 u=root |  ERROR! conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+2021-12-01 16:18:20,787 p=19853 u=root |  ERROR! conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+2021-12-01 16:18:24,723 p=19878 u=root |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 15, column 10, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: nginx-mainline リポジトリを有効化
+    shell: yum-config-manager --enable nginx-mainline
+         ^ here
+
+exception type: <class 'yaml.scanner.ScannerError'>
+exception: mapping values are not allowed in this context
+  in "<unicode string>", line 15, column 10
+2021-12-01 16:18:28,535 p=19903 u=root |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 15, column 10, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: nginx-mainline リポジトリを有効化
+    shell: yum-config-manager --enable nginx-mainline
+         ^ here
+
+exception type: <class 'yaml.scanner.ScannerError'>
+exception: mapping values are not allowed in this context
+  in "<unicode string>", line 15, column 10
+2021-12-01 16:18:45,797 p=19944 u=root |  ERROR! conflicting action statements: shell, debug
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: conflicting action statements: shell, debug
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+2021-12-01 16:19:02,701 p=19993 u=root |  ERROR! conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: conflicting action statements: debug, shell
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+2021-12-01 16:19:50,552 p=20036 u=root |  playbook: nginx.yml
+2021-12-01 16:23:44,093 p=20126 u=root |  ERROR! conflicting action statements: shell, debug
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+exception type: <class 'ansible.errors.AnsibleParserError'>
+exception: conflicting action statements: shell, debug
+
+The error appears to have been in '/root/nginx_auto_deploy/roles/nginx/tasks/setup_nginx.yml': line 14, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: nginx-mainline リポジトリを有効化
+  ^ here
+
+2021-12-01 16:24:13,945 p=20168 u=root |  playbook: nginx.yml
+2021-12-01 16:24:59,874 p=20210 u=root |  playbook: nginx.yml
+2021-12-01 16:33:27,440 p=20318 u=root |  playbook: nginx.yml
+2021-12-01 16:33:35,500 p=20344 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-01 16:33:35,515 p=20344 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-01 16:33:36,533 p=20344 u=root |  ok: [web01]
+2021-12-01 16:33:36,555 p=20344 u=root |  ok: [web02]
+2021-12-01 16:33:36,562 p=20344 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-01 16:33:37,143 p=20344 u=root |  ok: [web01]
+2021-12-01 16:33:37,155 p=20344 u=root |  ok: [web02]
+2021-12-01 16:33:37,163 p=20344 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-01 16:33:37,666 p=20344 u=root |  ok: [web01]
+2021-12-01 16:33:37,682 p=20344 u=root |  ok: [web02]
+2021-12-01 16:33:37,689 p=20344 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-01 16:33:38,187 p=20344 u=root |  ok: [web01]
+2021-12-01 16:33:38,201 p=20344 u=root |  ok: [web02]
+2021-12-01 16:33:38,208 p=20344 u=root |  TASK [nginx : firewalld停止] ******************************************************************************************************************************************************************************************************
+2021-12-01 16:33:38,725 p=20344 u=root |  ok: [web01]
+2021-12-01 16:33:38,739 p=20344 u=root |  ok: [web02]
+2021-12-01 16:33:38,746 p=20344 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-01 16:33:44,376 p=20344 u=root |  ok: [web02] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 16:33:46,430 p=20344 u=root |  ok: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 16:33:46,438 p=20344 u=root |  TASK [nginx : nginx.repoを転送] ****************************************************************************************************************************************************************************************************
+2021-12-01 16:33:47,199 p=20344 u=root |  ok: [web01]
+2021-12-01 16:33:47,215 p=20344 u=root |  ok: [web02]
+2021-12-01 16:33:47,223 p=20344 u=root |  TASK [nginx : nginx-mainline リポジトリを有効化] *****************************************************************************************************************************************************************************************
+2021-12-01 16:33:47,793 p=20344 u=root |  skipping: [web01]
+2021-12-01 16:33:47,798 p=20344 u=root |  skipping: [web02]
+2021-12-01 16:33:47,805 p=20344 u=root |  TASK [nginx : config-manager コマンド実行結果] ******************************************************************************************************************************************************************************************
+2021-12-01 16:33:47,869 p=20344 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "msg": "remote module (command) does not support check mode", 
+        "skipped": true
+    }
+}
+2021-12-01 16:33:47,877 p=20344 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "msg": "remote module (command) does not support check mode", 
+        "skipped": true
+    }
+}
+2021-12-01 16:33:47,884 p=20344 u=root |  TASK [nginx : nginxをインストール] *****************************************************************************************************************************************************************************************************
+2021-12-01 16:33:51,412 p=20344 u=root |  ok: [web02] => (item=[u'nginx'])
+2021-12-01 16:33:51,505 p=20344 u=root |  ok: [web01] => (item=[u'nginx'])
+2021-12-01 16:33:51,507 p=20344 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-01 16:33:51,507 p=20344 u=root |  web01                      : ok=9    changed=0    unreachable=0    failed=0   
+2021-12-01 16:33:51,507 p=20344 u=root |  web02                      : ok=9    changed=0    unreachable=0    failed=0   
+2021-12-01 16:34:00,919 p=20776 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-01 16:34:03,267 p=20776 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-01 16:34:03,272 p=20776 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-01 16:34:04,162 p=20776 u=root |  ok: [web01]
+2021-12-01 16:34:04,194 p=20776 u=root |  ok: [web02]
+2021-12-01 16:34:31,515 p=20776 u=root |  Perform task: TASK: nginx : 作業用ユーザ作成 (N)o/(y)es/(c)ontinue: *********************************************************************************************************************************************************************
+2021-12-01 16:34:31,522 p=20776 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-01 16:34:32,106 p=20776 u=root |  ok: [web01]
+2021-12-01 16:34:32,121 p=20776 u=root |  ok: [web02]
+2021-12-01 16:34:34,004 p=20776 u=root |  Perform task: TASK: nginx : 作業ディレクトリ作成 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 16:34:34,011 p=20776 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-01 16:34:34,510 p=20776 u=root |  ok: [web01]
+2021-12-01 16:34:34,527 p=20776 u=root |  ok: [web02]
+2021-12-01 16:34:36,259 p=20776 u=root |  Perform task: TASK: nginx : SELinux無効化 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 16:34:36,265 p=20776 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-01 16:34:36,759 p=20776 u=root |  ok: [web01]
+2021-12-01 16:34:36,775 p=20776 u=root |  ok: [web02]
+2021-12-01 16:34:38,563 p=20776 u=root |  Perform task: TASK: nginx : firewalld停止 (N)o/(y)es/(c)ontinue: ******************************************************************************************************************************************************************
+2021-12-01 16:34:38,570 p=20776 u=root |  TASK [nginx : firewalld停止] ******************************************************************************************************************************************************************************************************
+2021-12-01 16:34:39,089 p=20776 u=root |  ok: [web01]
+2021-12-01 16:34:39,103 p=20776 u=root |  ok: [web02]
+2021-12-01 16:34:40,915 p=20776 u=root |  Perform task: TASK: nginx : utilityツールをインストール (N)o/(y)es/(c)ontinue: ************************************************************************************************************************************************************
+2021-12-01 16:34:40,922 p=20776 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-01 16:34:46,447 p=20776 u=root |  ok: [web02] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 16:34:47,649 p=20776 u=root |  ok: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 16:34:49,907 p=20776 u=root |  Perform task: TASK: nginx : nginx.repoを転送 (N)o/(y)es/(c)ontinue: ****************************************************************************************************************************************************************
+2021-12-01 16:34:49,914 p=20776 u=root |  TASK [nginx : nginx.repoを転送] ****************************************************************************************************************************************************************************************************
+2021-12-01 16:34:50,664 p=20776 u=root |  ok: [web01]
+2021-12-01 16:34:50,686 p=20776 u=root |  ok: [web02]
+2021-12-01 16:34:57,908 p=20776 u=root |  Perform task: TASK: nginx : nginx-mainline リポジトリを有効化 (N)o/(y)es/(c)ontinue: *****************************************************************************************************************************************************
+2021-12-01 16:34:57,914 p=20776 u=root |  TASK [nginx : nginx-mainline リポジトリを有効化] *****************************************************************************************************************************************************************************************
+2021-12-01 16:34:58,622 p=20776 u=root |  fatal: [web01]: FAILED! => {"changed": true, "cmd": "yum-config-manager --enable nginx-mainline", "delta": "0:00:00.157061", "end": "2021-12-01 16:34:58.557217", "failed": true, "failed_when_result": true, "msg": "non-zero return code", "rc": 50, "start": "2021-12-01 16:34:58.400156", "stderr": "", "stderr_lines": [], "stdout": "読み込んだプラグイン:fastestmirror\nYou must be root to change the yum configuration.", "stdout_lines": ["読み込んだプラグイン:fastestmirror", "You must be root to change the yum configuration."]}
+2021-12-01 16:34:58,652 p=20776 u=root |  fatal: [web02]: FAILED! => {"changed": true, "cmd": "yum-config-manager --enable nginx-mainline", "delta": "0:00:00.162718", "end": "2021-12-01 16:34:58.585405", "failed": true, "failed_when_result": true, "msg": "non-zero return code", "rc": 50, "start": "2021-12-01 16:34:58.422687", "stderr": "", "stderr_lines": [], "stdout": "読み込んだプラグイン:fastestmirror\nYou must be root to change the yum configuration.", "stdout_lines": ["読み込んだプラグイン:fastestmirror", "You must be root to change the yum configuration."]}
+2021-12-01 16:34:58,654 p=20776 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-01 16:34:58,654 p=20776 u=root |  web01                      : ok=7    changed=0    unreachable=0    failed=1   
+2021-12-01 16:34:58,654 p=20776 u=root |  web02                      : ok=7    changed=0    unreachable=0    failed=1   
+2021-12-01 16:35:50,654 p=21351 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-01 16:35:52,087 p=21351 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-01 16:35:52,092 p=21351 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-01 16:35:52,960 p=21351 u=root |  ok: [web01]
+2021-12-01 16:35:52,994 p=21351 u=root |  ok: [web02]
+2021-12-01 16:35:53,731 p=21351 u=root |  Perform task: TASK: nginx : 作業用ユーザ作成 (N)o/(y)es/(c)ontinue: *********************************************************************************************************************************************************************
+2021-12-01 16:35:53,738 p=21351 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-01 16:35:54,315 p=21351 u=root |  ok: [web01]
+2021-12-01 16:35:54,335 p=21351 u=root |  ok: [web02]
+2021-12-01 16:35:55,115 p=21351 u=root |  Perform task: TASK: nginx : 作業ディレクトリ作成 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 16:35:55,122 p=21351 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-01 16:35:55,638 p=21351 u=root |  ok: [web02]
+2021-12-01 16:35:55,641 p=21351 u=root |  ok: [web01]
+2021-12-01 16:35:56,299 p=21351 u=root |  Perform task: TASK: nginx : SELinux無効化 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 16:35:56,306 p=21351 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-01 16:35:56,800 p=21351 u=root |  ok: [web01]
+2021-12-01 16:35:56,814 p=21351 u=root |  ok: [web02]
+2021-12-01 16:35:57,564 p=21351 u=root |  Perform task: TASK: nginx : firewalld停止 (N)o/(y)es/(c)ontinue: ******************************************************************************************************************************************************************
+2021-12-01 16:35:57,571 p=21351 u=root |  TASK [nginx : firewalld停止] ******************************************************************************************************************************************************************************************************
+2021-12-01 16:35:58,093 p=21351 u=root |  ok: [web01]
+2021-12-01 16:35:58,104 p=21351 u=root |  ok: [web02]
+2021-12-01 16:35:59,451 p=21351 u=root |  Perform task: TASK: nginx : utilityツールをインストール (N)o/(y)es/(c)ontinue: ************************************************************************************************************************************************************
+2021-12-01 16:35:59,458 p=21351 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-01 16:36:04,993 p=21351 u=root |  ok: [web02] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 16:36:07,405 p=21351 u=root |  ok: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 16:36:09,051 p=21351 u=root |  Perform task: TASK: nginx : nginx.repoを転送 (N)o/(y)es/(c)ontinue: ****************************************************************************************************************************************************************
+2021-12-01 16:36:09,058 p=21351 u=root |  TASK [nginx : nginx.repoを転送] ****************************************************************************************************************************************************************************************************
+2021-12-01 16:36:09,826 p=21351 u=root |  ok: [web01]
+2021-12-01 16:36:09,840 p=21351 u=root |  ok: [web02]
+2021-12-01 16:36:12,076 p=21351 u=root |  Perform task: TASK: nginx : nginx-mainline リポジトリを有効化 (N)o/(y)es/(c)ontinue: *****************************************************************************************************************************************************
+2021-12-01 16:36:12,083 p=21351 u=root |  TASK [nginx : nginx-mainline リポジトリを有効化] *****************************************************************************************************************************************************************************************
+2021-12-01 16:37:02,582 p=21351 u=root |   [ERROR]: User interrupted execution
+
+2021-12-01 16:37:42,552 p=21907 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-01 16:37:44,139 p=21907 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-01 16:37:44,144 p=21907 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-01 16:37:45,015 p=21907 u=root |  ok: [web01]
+2021-12-01 16:37:45,056 p=21907 u=root |  ok: [web02]
+2021-12-01 16:37:46,155 p=21907 u=root |  Perform task: TASK: nginx : 作業用ユーザ作成 (N)o/(y)es/(c)ontinue: *********************************************************************************************************************************************************************
+2021-12-01 16:37:46,162 p=21907 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-01 16:37:46,745 p=21907 u=root |  ok: [web01]
+2021-12-01 16:37:46,764 p=21907 u=root |  ok: [web02]
+2021-12-01 16:37:47,524 p=21907 u=root |  Perform task: TASK: nginx : 作業ディレクトリ作成 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 16:37:47,531 p=21907 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-01 16:37:48,030 p=21907 u=root |  ok: [web01]
+2021-12-01 16:37:48,049 p=21907 u=root |  ok: [web02]
+2021-12-01 16:37:48,813 p=21907 u=root |  Perform task: TASK: nginx : SELinux無効化 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-01 16:37:48,819 p=21907 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-01 16:37:49,314 p=21907 u=root |  ok: [web01]
+2021-12-01 16:37:49,333 p=21907 u=root |  ok: [web02]
+2021-12-01 16:37:50,084 p=21907 u=root |  Perform task: TASK: nginx : firewalld停止 (N)o/(y)es/(c)ontinue: ******************************************************************************************************************************************************************
+2021-12-01 16:37:50,090 p=21907 u=root |  TASK [nginx : firewalld停止] ******************************************************************************************************************************************************************************************************
+2021-12-01 16:37:50,610 p=21907 u=root |  ok: [web01]
+2021-12-01 16:37:50,626 p=21907 u=root |  ok: [web02]
+2021-12-01 16:37:51,475 p=21907 u=root |  Perform task: TASK: nginx : utilityツールをインストール (N)o/(y)es/(c)ontinue: ************************************************************************************************************************************************************
+2021-12-01 16:37:51,481 p=21907 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-01 16:37:57,021 p=21907 u=root |  ok: [web02] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 16:37:58,425 p=21907 u=root |  ok: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-01 16:38:00,708 p=21907 u=root |  Perform task: TASK: nginx : nginx.repoを転送 (N)o/(y)es/(c)ontinue: ****************************************************************************************************************************************************************
+2021-12-01 16:38:00,715 p=21907 u=root |  TASK [nginx : nginx.repoを転送] ****************************************************************************************************************************************************************************************************
+2021-12-01 16:38:01,670 p=21907 u=root |  changed: [web01]
+2021-12-01 16:38:01,678 p=21907 u=root |  changed: [web02]
+2021-12-01 16:38:11,956 p=21907 u=root |  Perform task: TASK: nginx : nginxをインストール (N)o/(y)es/(c)ontinue: *****************************************************************************************************************************************************************
+2021-12-01 16:38:11,963 p=21907 u=root |  TASK [nginx : nginxをインストール] *****************************************************************************************************************************************************************************************************
+2021-12-01 16:38:16,391 p=21907 u=root |  ok: [web01] => (item=[u'nginx'])
+2021-12-01 16:38:18,191 p=21907 u=root |  ok: [web02] => (item=[u'nginx'])
+2021-12-01 16:38:18,193 p=21907 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-01 16:38:18,193 p=21907 u=root |  web01                      : ok=8    changed=1    unreachable=0    failed=0   
+2021-12-01 16:38:18,193 p=21907 u=root |  web02                      : ok=8    changed=1    unreachable=0    failed=0   
