@@ -6,9 +6,9 @@ Role Name
 Variables
 --------------
 * group_vars
-  * work_usr: 公開用ディレクトリの所有者/グループを指定してください
-  * public_dir: 「/var/www/${work_usr}」がNginxを起動した際の公開ディレクトリとなります
-  * etc: 「./roles/nginx/file/default.conf」内の`location`先を上記の`public_dir`と合わせる必要があります
+  * work_usr: 公開用ディレクトリの所有者/グループを指定してください。
+  * public_dir: 「/var/www/${work_usr}」がNginxを起動した際の公開ディレクトリとなります。
+  * etc: 「./roles/nginx/file/default.conf」内の`location`先を上記の`public_dir`と合わせる必要があります。
 
 etc
 --------------
