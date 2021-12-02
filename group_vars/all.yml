@@ -1,0 +1,12 @@
+---
+work_usr: "websrv"
+
+work_dir: "/tmp/WORKDIR"
+
+process:
+  - firewalld
+  - crond
+  - httpd
+
+tools:
+  - 

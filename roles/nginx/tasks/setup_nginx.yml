@@ -4,7 +4,12 @@
       name: "{{ item }}"
       state: latest
     with_items: "{{ utility_packages }}"
+    register: utility_install_result
     ignore_errors: yes
+
+  - name: utilityツールのインストール結果
+    debug:
+      msg: "{{ utility_install_result }}"
 
   - name: nginx.repoを転送
     copy:
@@ -18,4 +23,14 @@
       name: "{{ item }}"
       state: latest
     with_items: "{{ nginx_packages }}"
+    register: ngins_install_result
     ignore_errors: yes
+
+  - name: nginxのインストール結果
+    debug:
+      msg: "{{ ngins_install_result }}"
+
+  - name: check
+    pause:
+      prompt: |
+        "各サーバで「niginx -v」を実行し、nginxが正しくインストールされていることが確認できたら進みましょう"

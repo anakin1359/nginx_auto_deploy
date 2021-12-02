@@ -1,14 +1,14 @@
 ---
   - name: 作業用ユーザ作成
     user:
-      name: websrv
+      name: "{{ work_usr }}"
       shell: /bin/bash
       state: present
     ignore_errors: yes
 
   - name: 作業ディレクトリ作成
     file:
-      path: /tmp/WORKDIR
+      path: "{{ work_dir }}"
       state: directory
       owner: websrv
       group: websrv

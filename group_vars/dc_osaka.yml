@@ -1,0 +1,4 @@
+---
+load_balancer_ip:       # ${ ip-add }
+load_balancer_user:     # ${ id }
+load_balancer_password: # ${ password }
