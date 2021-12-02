@@ -22,10 +22,3 @@
       replace: SELINUX=disabled
       backup: yes
     ignore_errors: yes
-
-  - name: firewalld停止
-    systemd:
-      name: firewalld.service
-      state: stopped
-      enabled: no
-    ignore_errors: yes

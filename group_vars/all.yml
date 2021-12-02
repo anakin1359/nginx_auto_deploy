@@ -1,12 +1,13 @@
 ---
-work_usr: "websrv"
+work_usr: "test"
 
 work_dir: "/tmp/WORKDIR"
 
-process:
-  - firewalld
-  - crond
-  - httpd
+public_dir: "/var/www/{{ work_usr }}"
+
+stop_process: "httpd.service"
+
+start_process: "nginx.service"
 
 tools:
   - 
