@@ -9151,3 +9151,2060 @@ The offending line appears to be:
 2021-12-02 15:37:34,797 p=26761 u=root |  web02                      : ok=6    changed=0    unreachable=0    failed=0   
 2021-12-02 15:37:34,798 p=26761 u=root |  web03                      : ok=5    changed=0    unreachable=0    failed=0   
 2021-12-02 15:37:34,798 p=26761 u=root |  web04                      : ok=5    changed=0    unreachable=0    failed=0   
+2021-12-02 15:39:20,597 p=27327 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-02 15:39:23,944 p=27327 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-02 15:39:23,950 p=27327 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-02 15:39:24,952 p=27327 u=root |  ok: [web03]
+2021-12-02 15:39:24,970 p=27327 u=root |  ok: [web04]
+2021-12-02 15:39:24,983 p=27327 u=root |  ok: [web01]
+2021-12-02 15:39:24,998 p=27327 u=root |  ok: [web02]
+2021-12-02 15:39:25,005 p=27327 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-02 15:39:25,567 p=27327 u=root |  ok: [web04]
+2021-12-02 15:39:25,572 p=27327 u=root |  ok: [web03]
+2021-12-02 15:39:25,592 p=27327 u=root |  ok: [web01]
+2021-12-02 15:39:25,600 p=27327 u=root |  ok: [web02]
+2021-12-02 15:39:25,608 p=27327 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-02 15:39:26,089 p=27327 u=root |  ok: [web03]
+2021-12-02 15:39:26,106 p=27327 u=root |  ok: [web04]
+2021-12-02 15:39:26,107 p=27327 u=root |  ok: [web01]
+2021-12-02 15:39:26,119 p=27327 u=root |  ok: [web02]
+2021-12-02 15:39:26,127 p=27327 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-02 15:39:26,598 p=27327 u=root |  ok: [web04]
+2021-12-02 15:39:26,600 p=27327 u=root |  ok: [web03]
+2021-12-02 15:39:26,622 p=27327 u=root |  ok: [web01]
+2021-12-02 15:39:26,633 p=27327 u=root |  ok: [web02]
+2021-12-02 15:39:26,641 p=27327 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-02 15:39:46,245 p=27327 u=root |  ok: [web04] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 15:39:46,727 p=27327 u=root |  ok: [web03] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 15:39:52,728 p=27327 u=root |  ok: [web02] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 15:39:52,922 p=27327 u=root |  ok: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 15:39:52,929 p=27327 u=root |  TASK [nginx : utilityツールのインストール結果] **********************************************************************************************************************************************************************************************
+2021-12-02 15:39:52,973 p=27327 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:39:52,980 p=27327 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:39:52,990 p=27327 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:39:53,002 p=27327 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:39:53,010 p=27327 u=root |  TASK [nginx : nginx.repoを転送] ****************************************************************************************************************************************************************************************************
+2021-12-02 15:39:53,760 p=27327 u=root |  ok: [web04]
+2021-12-02 15:39:53,762 p=27327 u=root |  ok: [web03]
+2021-12-02 15:39:53,776 p=27327 u=root |  ok: [web01]
+2021-12-02 15:39:53,782 p=27327 u=root |  ok: [web02]
+2021-12-02 15:39:53,789 p=27327 u=root |  TASK [nginx : nginxをインストール] *****************************************************************************************************************************************************************************************************
+2021-12-02 15:39:57,282 p=27327 u=root |  ok: [web03] => (item=[u'nginx'])
+2021-12-02 15:39:57,983 p=27327 u=root |  ok: [web02] => (item=[u'nginx'])
+2021-12-02 15:39:58,803 p=27327 u=root |  ok: [web01] => (item=[u'nginx'])
+2021-12-02 15:40:00,024 p=27327 u=root |  ok: [web04] => (item=[u'nginx'])
+2021-12-02 15:40:00,031 p=27327 u=root |  TASK [nginx : nginxのインストール結果] ***************************************************************************************************************************************************************************************************
+2021-12-02 15:40:00,071 p=27327 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:40:00,079 p=27327 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:40:00,089 p=27327 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:40:00,102 p=27327 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:40:00,110 p=27327 u=root |  TASK [nginx : check] ************************************************************************************************************************************************************************************************************
+2021-12-02 15:40:00,141 p=27327 u=root |  [nginx : check]
+"各サーバで「niginx -v」を実行し、nginxが正しくインストールされていることが確認できたら進みましょう"
+:
+2021-12-02 15:40:50,068 p=27327 u=root |  ok: [web01]
+2021-12-02 15:40:50,076 p=27327 u=root |  TASK [nginx : 公開用ディレクトリを作成] *****************************************************************************************************************************************************************************************************
+2021-12-02 15:40:50,444 p=27327 u=root |  ok: [web03]
+2021-12-02 15:40:50,448 p=27327 u=root |  ok: [web01]
+2021-12-02 15:40:50,453 p=27327 u=root |  ok: [web04]
+2021-12-02 15:40:50,469 p=27327 u=root |  ok: [web02]
+2021-12-02 15:40:50,476 p=27327 u=root |  TASK [nginx : topページ（index.html）を公開ディレクトリに配置] ***********************************************************************************************************************************************************************************
+2021-12-02 15:40:51,093 p=27327 u=root |  changed: [web03]
+2021-12-02 15:40:51,099 p=27327 u=root |  changed: [web01]
+2021-12-02 15:40:51,108 p=27327 u=root |  changed: [web04]
+2021-12-02 15:40:51,121 p=27327 u=root |  changed: [web02]
+2021-12-02 15:40:51,129 p=27327 u=root |  TASK [nginx : default.confを転送] **************************************************************************************************************************************************************************************************
+2021-12-02 15:40:51,506 p=27327 u=root |  changed: [web03]
+2021-12-02 15:40:51,509 p=27327 u=root |  changed: [web04]
+2021-12-02 15:40:51,511 p=27327 u=root |  changed: [web01]
+2021-12-02 15:40:51,526 p=27327 u=root |  changed: [web02]
+2021-12-02 15:40:51,534 p=27327 u=root |  TASK [nginx : default.confのbackup] **********************************************************************************************************************************************************************************************
+2021-12-02 15:40:51,995 p=27327 u=root |  skipping: [web04]
+2021-12-02 15:40:51,998 p=27327 u=root |  skipping: [web03]
+2021-12-02 15:40:52,024 p=27327 u=root |  skipping: [web01]
+2021-12-02 15:40:52,031 p=27327 u=root |  skipping: [web02]
+2021-12-02 15:40:52,039 p=27327 u=root |  TASK [nginx : default.confの設定(listen-port指定)] ***********************************************************************************************************************************************************************************
+2021-12-02 15:40:52,398 p=27327 u=root |  skipping: [web03]
+2021-12-02 15:40:52,401 p=27327 u=root |  skipping: [web01]
+2021-12-02 15:40:52,405 p=27327 u=root |  skipping: [web04]
+2021-12-02 15:40:52,422 p=27327 u=root |  skipping: [web02]
+2021-12-02 15:40:52,430 p=27327 u=root |  TASK [nginx : httpdが存在しているかの確認] *************************************************************************************************************************************************************************************************
+2021-12-02 15:40:52,794 p=27327 u=root |  ok: [web03]
+2021-12-02 15:40:52,797 p=27327 u=root |  ok: [web04]
+2021-12-02 15:40:52,814 p=27327 u=root |  ok: [web01]
+2021-12-02 15:40:52,829 p=27327 u=root |  ok: [web02]
+2021-12-02 15:40:52,837 p=27327 u=root |  TASK [nginx : 実行結果（httpd存在性）] ***************************************************************************************************************************************************************************************************
+2021-12-02 15:40:52,877 p=27327 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1638424857.8919704, 
+            "attr_flags": "", 
+            "attributes": [], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "us-ascii", 
+            "checksum": "c7ec7c6c718f834e233aca76674f08f56ab53a50", 
+            "ctime": 1626334672.1038928, 
+            "dev": 64768, 
+            "device_type": 0, 
+            "executable": false, 
+            "exists": true, 
+            "gid": 0, 
+            "gr_name": "root", 
+            "inode": 9210063, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "md5": "c0b3227317d09b789b8f9f7b8c9b8282", 
+            "mimetype": "text/plain", 
+            "mode": "0644", 
+            "mtime": 1605537843.0, 
+            "nlink": 1, 
+            "path": "/usr/lib/systemd/system/httpd.service", 
+            "pw_name": "root", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 752, 
+            "uid": 0, 
+            "version": "990675519", 
+            "wgrp": false, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    }
+}
+2021-12-02 15:40:52,885 p=27327 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1638425711.7552905, 
+            "attr_flags": "", 
+            "attributes": [], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "us-ascii", 
+            "checksum": "c7ec7c6c718f834e233aca76674f08f56ab53a50", 
+            "ctime": 1626334666.811114, 
+            "dev": 64768, 
+            "device_type": 0, 
+            "executable": false, 
+            "exists": true, 
+            "gid": 0, 
+            "gr_name": "root", 
+            "inode": 9458519, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "md5": "c0b3227317d09b789b8f9f7b8c9b8282", 
+            "mimetype": "text/plain", 
+            "mode": "0644", 
+            "mtime": 1605537843.0, 
+            "nlink": 1, 
+            "path": "/usr/lib/systemd/system/httpd.service", 
+            "pw_name": "root", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 752, 
+            "uid": 0, 
+            "version": "166428216", 
+            "wgrp": false, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    }
+}
+2021-12-02 15:40:52,893 p=27327 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2021-12-02 15:40:52,905 p=27327 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2021-12-02 15:40:52,912 p=27327 u=root |  TASK [nginx : httpdが存在している場合はサービスを停止] *******************************************************************************************************************************************************************************************
+2021-12-02 15:40:52,949 p=27327 u=root |  skipping: [web03]
+2021-12-02 15:40:52,960 p=27327 u=root |  skipping: [web04]
+2021-12-02 15:40:53,435 p=27327 u=root |  ok: [web01]
+2021-12-02 15:40:53,437 p=27327 u=root |  ok: [web02]
+2021-12-02 15:40:53,444 p=27327 u=root |  TASK [nginx : 実行結果（httpd停止）] ****************************************************************************************************************************************************************************************************
+2021-12-02 15:40:53,487 p=27327 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "enabled": false, 
+        "failed": false, 
+        "name": "httpd.service", 
+        "state": "stopped", 
+        "status": {
+            "ActiveEnterTimestampMonotonic": "0", 
+            "ActiveExitTimestampMonotonic": "0", 
+            "ActiveState": "inactive", 
+            "After": "network.target system.slice -.mount nss-lookup.target remote-fs.target basic.target tmp.mount systemd-journald.socket", 
+            "AllowIsolate": "no", 
+            "AmbientCapabilities": "0", 
+            "AssertResult": "no", 
+            "AssertTimestampMonotonic": "0", 
+            "Before": "shutdown.target", 
+            "BlockIOAccounting": "no", 
+            "BlockIOWeight": "18446744073709551615", 
+            "CPUAccounting": "no", 
+            "CPUQuotaPerSecUSec": "infinity", 
+            "CPUSchedulingPolicy": "0", 
+            "CPUSchedulingPriority": "0", 
+            "CPUSchedulingResetOnFork": "no", 
+            "CPUShares": "18446744073709551615", 
+            "CanIsolate": "no", 
+            "CanReload": "yes", 
+            "CanStart": "yes", 
+            "CanStop": "yes", 
+            "CapabilityBoundingSet": "18446744073709551615", 
+            "ConditionResult": "no", 
+            "ConditionTimestampMonotonic": "0", 
+            "Conflicts": "shutdown.target", 
+            "ControlPID": "0", 
+            "DefaultDependencies": "yes", 
+            "Delegate": "no", 
+            "Description": "The Apache HTTP Server", 
+            "DevicePolicy": "auto", 
+            "Documentation": "man:httpd(8) man:apachectl(8)", 
+            "EnvironmentFile": "/etc/sysconfig/httpd (ignore_errors=no)", 
+            "ExecMainCode": "0", 
+            "ExecMainExitTimestampMonotonic": "0", 
+            "ExecMainPID": "0", 
+            "ExecMainStartTimestampMonotonic": "0", 
+            "ExecMainStatus": "0", 
+            "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -WINCH ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "FailureAction": "none", 
+            "FileDescriptorStoreMax": "0", 
+            "FragmentPath": "/usr/lib/systemd/system/httpd.service", 
+            "GuessMainPID": "yes", 
+            "IOScheduling": "0", 
+            "Id": "httpd.service", 
+            "IgnoreOnIsolate": "no", 
+            "IgnoreOnSnapshot": "no", 
+            "IgnoreSIGPIPE": "yes", 
+            "InactiveEnterTimestampMonotonic": "0", 
+            "InactiveExitTimestampMonotonic": "0", 
+            "JobTimeoutAction": "none", 
+            "JobTimeoutUSec": "0", 
+            "KillMode": "control-group", 
+            "KillSignal": "18", 
+            "LimitAS": "18446744073709551615", 
+            "LimitCORE": "18446744073709551615", 
+            "LimitCPU": "18446744073709551615", 
+            "LimitDATA": "18446744073709551615", 
+            "LimitFSIZE": "18446744073709551615", 
+            "LimitLOCKS": "18446744073709551615", 
+            "LimitMEMLOCK": "65536", 
+            "LimitMSGQUEUE": "819200", 
+            "LimitNICE": "0", 
+            "LimitNOFILE": "4096", 
+            "LimitNPROC": "7261", 
+            "LimitRSS": "18446744073709551615", 
+            "LimitRTPRIO": "0", 
+            "LimitRTTIME": "18446744073709551615", 
+            "LimitSIGPENDING": "7261", 
+            "LimitSTACK": "18446744073709551615", 
+            "LoadState": "loaded", 
+            "MainPID": "0", 
+            "MemoryAccounting": "no", 
+            "MemoryCurrent": "18446744073709551615", 
+            "MemoryLimit": "18446744073709551615", 
+            "MountFlags": "0", 
+            "Names": "httpd.service", 
+            "NeedDaemonReload": "no", 
+            "Nice": "0", 
+            "NoNewPrivileges": "no", 
+            "NonBlocking": "no", 
+            "NotifyAccess": "main", 
+            "OOMScoreAdjust": "0", 
+            "OnFailureJobMode": "replace", 
+            "PermissionsStartOnly": "no", 
+            "PrivateDevices": "no", 
+            "PrivateNetwork": "no", 
+            "PrivateTmp": "yes", 
+            "ProtectHome": "no", 
+            "ProtectSystem": "no", 
+            "RefuseManualStart": "no", 
+            "RefuseManualStop": "no", 
+            "RemainAfterExit": "no", 
+            "Requires": "system.slice -.mount basic.target", 
+            "RequiresMountsFor": "/var/tmp", 
+            "Restart": "no", 
+            "RestartUSec": "100ms", 
+            "Result": "success", 
+            "RootDirectoryStartOnly": "no", 
+            "RuntimeDirectoryMode": "0755", 
+            "SameProcessGroup": "no", 
+            "SecureBits": "0", 
+            "SendSIGHUP": "no", 
+            "SendSIGKILL": "yes", 
+            "Slice": "system.slice", 
+            "StandardError": "inherit", 
+            "StandardInput": "null", 
+            "StandardOutput": "journal", 
+            "StartLimitAction": "none", 
+            "StartLimitBurst": "5", 
+            "StartLimitInterval": "10000000", 
+            "StartupBlockIOWeight": "18446744073709551615", 
+            "StartupCPUShares": "18446744073709551615", 
+            "StatusErrno": "0", 
+            "StopWhenUnneeded": "no", 
+            "SubState": "dead", 
+            "SyslogLevelPrefix": "yes", 
+            "SyslogPriority": "30", 
+            "SystemCallErrorNumber": "0", 
+            "TTYReset": "no", 
+            "TTYVHangup": "no", 
+            "TTYVTDisallocate": "no", 
+            "TasksAccounting": "no", 
+            "TasksCurrent": "18446744073709551615", 
+            "TasksMax": "18446744073709551615", 
+            "TimeoutStartUSec": "1min 30s", 
+            "TimeoutStopUSec": "1min 30s", 
+            "TimerSlackNSec": "50000", 
+            "Transient": "no", 
+            "Type": "notify", 
+            "UMask": "0022", 
+            "UnitFilePreset": "disabled", 
+            "UnitFileState": "disabled", 
+            "WatchdogTimestampMonotonic": "0", 
+            "WatchdogUSec": "0"
+        }
+    }
+}
+2021-12-02 15:40:53,495 p=27327 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "enabled": false, 
+        "failed": false, 
+        "name": "httpd.service", 
+        "state": "stopped", 
+        "status": {
+            "ActiveEnterTimestampMonotonic": "0", 
+            "ActiveExitTimestampMonotonic": "0", 
+            "ActiveState": "inactive", 
+            "After": "tmp.mount systemd-journald.socket system.slice -.mount basic.target remote-fs.target nss-lookup.target network.target", 
+            "AllowIsolate": "no", 
+            "AmbientCapabilities": "0", 
+            "AssertResult": "no", 
+            "AssertTimestampMonotonic": "0", 
+            "Before": "shutdown.target", 
+            "BlockIOAccounting": "no", 
+            "BlockIOWeight": "18446744073709551615", 
+            "CPUAccounting": "no", 
+            "CPUQuotaPerSecUSec": "infinity", 
+            "CPUSchedulingPolicy": "0", 
+            "CPUSchedulingPriority": "0", 
+            "CPUSchedulingResetOnFork": "no", 
+            "CPUShares": "18446744073709551615", 
+            "CanIsolate": "no", 
+            "CanReload": "yes", 
+            "CanStart": "yes", 
+            "CanStop": "yes", 
+            "CapabilityBoundingSet": "18446744073709551615", 
+            "ConditionResult": "no", 
+            "ConditionTimestampMonotonic": "0", 
+            "Conflicts": "shutdown.target", 
+            "ControlPID": "0", 
+            "DefaultDependencies": "yes", 
+            "Delegate": "no", 
+            "Description": "The Apache HTTP Server", 
+            "DevicePolicy": "auto", 
+            "Documentation": "man:httpd(8) man:apachectl(8)", 
+            "EnvironmentFile": "/etc/sysconfig/httpd (ignore_errors=no)", 
+            "ExecMainCode": "0", 
+            "ExecMainExitTimestampMonotonic": "0", 
+            "ExecMainPID": "0", 
+            "ExecMainStartTimestampMonotonic": "0", 
+            "ExecMainStatus": "0", 
+            "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -WINCH ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "FailureAction": "none", 
+            "FileDescriptorStoreMax": "0", 
+            "FragmentPath": "/usr/lib/systemd/system/httpd.service", 
+            "GuessMainPID": "yes", 
+            "IOScheduling": "0", 
+            "Id": "httpd.service", 
+            "IgnoreOnIsolate": "no", 
+            "IgnoreOnSnapshot": "no", 
+            "IgnoreSIGPIPE": "yes", 
+            "InactiveEnterTimestampMonotonic": "0", 
+            "InactiveExitTimestampMonotonic": "0", 
+            "JobTimeoutAction": "none", 
+            "JobTimeoutUSec": "0", 
+            "KillMode": "control-group", 
+            "KillSignal": "18", 
+            "LimitAS": "18446744073709551615", 
+            "LimitCORE": "18446744073709551615", 
+            "LimitCPU": "18446744073709551615", 
+            "LimitDATA": "18446744073709551615", 
+            "LimitFSIZE": "18446744073709551615", 
+            "LimitLOCKS": "18446744073709551615", 
+            "LimitMEMLOCK": "65536", 
+            "LimitMSGQUEUE": "819200", 
+            "LimitNICE": "0", 
+            "LimitNOFILE": "4096", 
+            "LimitNPROC": "7260", 
+            "LimitRSS": "18446744073709551615", 
+            "LimitRTPRIO": "0", 
+            "LimitRTTIME": "18446744073709551615", 
+            "LimitSIGPENDING": "7260", 
+            "LimitSTACK": "18446744073709551615", 
+            "LoadState": "loaded", 
+            "MainPID": "0", 
+            "MemoryAccounting": "no", 
+            "MemoryCurrent": "18446744073709551615", 
+            "MemoryLimit": "18446744073709551615", 
+            "MountFlags": "0", 
+            "Names": "httpd.service", 
+            "NeedDaemonReload": "no", 
+            "Nice": "0", 
+            "NoNewPrivileges": "no", 
+            "NonBlocking": "no", 
+            "NotifyAccess": "main", 
+            "OOMScoreAdjust": "0", 
+            "OnFailureJobMode": "replace", 
+            "PermissionsStartOnly": "no", 
+            "PrivateDevices": "no", 
+            "PrivateNetwork": "no", 
+            "PrivateTmp": "yes", 
+            "ProtectHome": "no", 
+            "ProtectSystem": "no", 
+            "RefuseManualStart": "no", 
+            "RefuseManualStop": "no", 
+            "RemainAfterExit": "no", 
+            "Requires": "-.mount basic.target system.slice", 
+            "RequiresMountsFor": "/var/tmp", 
+            "Restart": "no", 
+            "RestartUSec": "100ms", 
+            "Result": "success", 
+            "RootDirectoryStartOnly": "no", 
+            "RuntimeDirectoryMode": "0755", 
+            "SameProcessGroup": "no", 
+            "SecureBits": "0", 
+            "SendSIGHUP": "no", 
+            "SendSIGKILL": "yes", 
+            "Slice": "system.slice", 
+            "StandardError": "inherit", 
+            "StandardInput": "null", 
+            "StandardOutput": "journal", 
+            "StartLimitAction": "none", 
+            "StartLimitBurst": "5", 
+            "StartLimitInterval": "10000000", 
+            "StartupBlockIOWeight": "18446744073709551615", 
+            "StartupCPUShares": "18446744073709551615", 
+            "StatusErrno": "0", 
+            "StopWhenUnneeded": "no", 
+            "SubState": "dead", 
+            "SyslogLevelPrefix": "yes", 
+            "SyslogPriority": "30", 
+            "SystemCallErrorNumber": "0", 
+            "TTYReset": "no", 
+            "TTYVHangup": "no", 
+            "TTYVTDisallocate": "no", 
+            "TasksAccounting": "no", 
+            "TasksCurrent": "18446744073709551615", 
+            "TasksMax": "18446744073709551615", 
+            "TimeoutStartUSec": "1min 30s", 
+            "TimeoutStopUSec": "1min 30s", 
+            "TimerSlackNSec": "50000", 
+            "Transient": "no", 
+            "Type": "notify", 
+            "UMask": "0022", 
+            "UnitFilePreset": "disabled", 
+            "UnitFileState": "disabled", 
+            "WatchdogTimestampMonotonic": "0", 
+            "WatchdogUSec": "0"
+        }
+    }
+}
+2021-12-02 15:40:53,500 p=27327 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2021-12-02 15:40:53,511 p=27327 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2021-12-02 15:40:53,519 p=27327 u=root |  TASK [nginx : nginxの起動] *********************************************************************************************************************************************************************************************************
+2021-12-02 15:40:53,902 p=27327 u=root |  ok: [web03]
+2021-12-02 15:40:53,905 p=27327 u=root |  ok: [web01]
+2021-12-02 15:40:53,906 p=27327 u=root |  ok: [web04]
+2021-12-02 15:40:53,920 p=27327 u=root |  ok: [web02]
+2021-12-02 15:40:53,922 p=27327 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-02 15:40:53,923 p=27327 u=root |  web01                      : ok=18   changed=2    unreachable=0    failed=0   
+2021-12-02 15:40:53,923 p=27327 u=root |  web02                      : ok=17   changed=2    unreachable=0    failed=0   
+2021-12-02 15:40:53,923 p=27327 u=root |  web03                      : ok=16   changed=2    unreachable=0    failed=0   
+2021-12-02 15:40:53,923 p=27327 u=root |  web04                      : ok=16   changed=2    unreachable=0    failed=0   
+2021-12-02 15:42:12,281 p=28632 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-02 15:42:16,857 p=28632 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-02 15:42:16,863 p=28632 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-02 15:42:17,859 p=28632 u=root |  ok: [web03]
+2021-12-02 15:42:17,878 p=28632 u=root |  ok: [web01]
+2021-12-02 15:42:17,888 p=28632 u=root |  ok: [web04]
+2021-12-02 15:42:17,902 p=28632 u=root |  ok: [web02]
+2021-12-02 15:42:20,297 p=28632 u=root |  Perform task: TASK: nginx : 作業用ユーザ作成 (N)o/(y)es/(c)ontinue: *********************************************************************************************************************************************************************
+2021-12-02 15:42:20,304 p=28632 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-02 15:42:20,881 p=28632 u=root |  ok: [web04]
+2021-12-02 15:42:20,888 p=28632 u=root |  ok: [web03]
+2021-12-02 15:42:20,911 p=28632 u=root |  ok: [web01]
+2021-12-02 15:42:20,919 p=28632 u=root |  ok: [web02]
+2021-12-02 15:42:20,927 p=28632 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-02 15:42:21,406 p=28632 u=root |  ok: [web04]
+2021-12-02 15:42:21,408 p=28632 u=root |  ok: [web03]
+2021-12-02 15:42:21,428 p=28632 u=root |  ok: [web01]
+2021-12-02 15:42:21,438 p=28632 u=root |  ok: [web02]
+2021-12-02 15:42:21,446 p=28632 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-02 15:42:21,913 p=28632 u=root |  ok: [web04]
+2021-12-02 15:42:21,920 p=28632 u=root |  ok: [web03]
+2021-12-02 15:42:21,946 p=28632 u=root |  ok: [web01]
+2021-12-02 15:42:21,952 p=28632 u=root |  ok: [web02]
+2021-12-02 15:42:21,960 p=28632 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-02 15:42:34,426 p=28632 u=root |  ok: [web04] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 15:42:38,936 p=28632 u=root |  ok: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 15:42:41,534 p=28632 u=root |  ok: [web03] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 15:42:47,899 p=28632 u=root |  ok: [web02] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 15:42:47,906 p=28632 u=root |  TASK [nginx : utilityツールのインストール結果] **********************************************************************************************************************************************************************************************
+2021-12-02 15:42:47,948 p=28632 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date", 
+                    ""
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:42:47,955 p=28632 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date", 
+                    ""
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:42:47,965 p=28632 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date", 
+                    ""
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:42:47,977 p=28632 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date", 
+                    ""
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:42:47,985 p=28632 u=root |  TASK [nginx : nginx.repoを転送] ****************************************************************************************************************************************************************************************************
+2021-12-02 15:42:48,734 p=28632 u=root |  ok: [web04]
+2021-12-02 15:42:48,740 p=28632 u=root |  ok: [web03]
+2021-12-02 15:42:48,748 p=28632 u=root |  ok: [web01]
+2021-12-02 15:42:48,755 p=28632 u=root |  ok: [web02]
+2021-12-02 15:42:48,762 p=28632 u=root |  TASK [nginx : nginxをインストール] *****************************************************************************************************************************************************************************************************
+2021-12-02 15:42:53,150 p=28632 u=root |  ok: [web03] => (item=[u'nginx'])
+2021-12-02 15:42:54,610 p=28632 u=root |  ok: [web01] => (item=[u'nginx'])
+2021-12-02 15:42:54,651 p=28632 u=root |  ok: [web02] => (item=[u'nginx'])
+2021-12-02 15:42:55,093 p=28632 u=root |  ok: [web04] => (item=[u'nginx'])
+2021-12-02 15:42:55,101 p=28632 u=root |  TASK [nginx : nginxのインストール結果] ***************************************************************************************************************************************************************************************************
+2021-12-02 15:42:55,141 p=28632 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date", 
+                    ""
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:42:55,148 p=28632 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date", 
+                    ""
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:42:55,158 p=28632 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date", 
+                    ""
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:42:55,171 p=28632 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date", 
+                    ""
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 15:42:55,179 p=28632 u=root |  TASK [nginx : check] ************************************************************************************************************************************************************************************************************
+2021-12-02 15:42:55,210 p=28632 u=root |  [nginx : check]
+"各サーバで「nginx -v」を実行し、nginxが正しくインストールされていることが確認できたら進みましょう"
+:
+2021-12-02 15:43:12,283 p=28632 u=root |  ok: [web01]
+2021-12-02 15:43:12,291 p=28632 u=root |  TASK [nginx : 公開用ディレクトリを作成] *****************************************************************************************************************************************************************************************************
+2021-12-02 15:43:12,646 p=28632 u=root |  ok: [web03]
+2021-12-02 15:43:12,657 p=28632 u=root |  ok: [web01]
+2021-12-02 15:43:12,675 p=28632 u=root |  ok: [web04]
+2021-12-02 15:43:12,680 p=28632 u=root |  ok: [web02]
+2021-12-02 15:43:12,688 p=28632 u=root |  TASK [nginx : topページ（index.html）を公開ディレクトリに配置] ***********************************************************************************************************************************************************************************
+2021-12-02 15:43:13,526 p=28632 u=root |  ok: [web03]
+2021-12-02 15:43:13,563 p=28632 u=root |  ok: [web01]
+2021-12-02 15:43:13,599 p=28632 u=root |  ok: [web02]
+2021-12-02 15:43:13,620 p=28632 u=root |  ok: [web04]
+2021-12-02 15:43:13,627 p=28632 u=root |  TASK [nginx : default.confを転送] **************************************************************************************************************************************************************************************************
+2021-12-02 15:43:14,429 p=28632 u=root |  changed: [web03]
+2021-12-02 15:43:14,439 p=28632 u=root |  changed: [web01]
+2021-12-02 15:43:14,444 p=28632 u=root |  changed: [web04]
+2021-12-02 15:43:14,449 p=28632 u=root |  changed: [web02]
+2021-12-02 15:43:14,457 p=28632 u=root |  TASK [nginx : default.confのbackup] **********************************************************************************************************************************************************************************************
+2021-12-02 15:43:14,930 p=28632 u=root |  changed: [web03]
+2021-12-02 15:43:14,950 p=28632 u=root |  changed: [web04]
+2021-12-02 15:43:14,970 p=28632 u=root |  changed: [web01]
+2021-12-02 15:43:14,975 p=28632 u=root |  changed: [web02]
+2021-12-02 15:43:14,982 p=28632 u=root |  TASK [nginx : default.confの設定(listen-port指定)] ***********************************************************************************************************************************************************************************
+2021-12-02 15:43:15,343 p=28632 u=root |   [WARNING]: Consider using template or lineinfile module rather than running sed
+
+2021-12-02 15:43:15,344 p=28632 u=root |  changed: [web03]
+2021-12-02 15:43:15,354 p=28632 u=root |  changed: [web01]
+2021-12-02 15:43:15,374 p=28632 u=root |  changed: [web02]
+2021-12-02 15:43:15,378 p=28632 u=root |  changed: [web04]
+2021-12-02 15:43:15,386 p=28632 u=root |  TASK [nginx : httpdが存在しているかの確認] *************************************************************************************************************************************************************************************************
+2021-12-02 15:43:15,741 p=28632 u=root |  ok: [web03]
+2021-12-02 15:43:15,768 p=28632 u=root |  ok: [web01]
+2021-12-02 15:43:15,775 p=28632 u=root |  ok: [web04]
+2021-12-02 15:43:15,784 p=28632 u=root |  ok: [web02]
+2021-12-02 15:43:15,791 p=28632 u=root |  TASK [nginx : 実行結果（httpd存在性）] ***************************************************************************************************************************************************************************************************
+2021-12-02 15:43:15,831 p=28632 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1638424857.8919704, 
+            "attr_flags": "", 
+            "attributes": [], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "us-ascii", 
+            "checksum": "c7ec7c6c718f834e233aca76674f08f56ab53a50", 
+            "ctime": 1626334672.1038928, 
+            "dev": 64768, 
+            "device_type": 0, 
+            "executable": false, 
+            "exists": true, 
+            "gid": 0, 
+            "gr_name": "root", 
+            "inode": 9210063, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "md5": "c0b3227317d09b789b8f9f7b8c9b8282", 
+            "mimetype": "text/plain", 
+            "mode": "0644", 
+            "mtime": 1605537843.0, 
+            "nlink": 1, 
+            "path": "/usr/lib/systemd/system/httpd.service", 
+            "pw_name": "root", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 752, 
+            "uid": 0, 
+            "version": "990675519", 
+            "wgrp": false, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    }
+}
+2021-12-02 15:43:15,838 p=28632 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1638425711.7552905, 
+            "attr_flags": "", 
+            "attributes": [], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "us-ascii", 
+            "checksum": "c7ec7c6c718f834e233aca76674f08f56ab53a50", 
+            "ctime": 1626334666.811114, 
+            "dev": 64768, 
+            "device_type": 0, 
+            "executable": false, 
+            "exists": true, 
+            "gid": 0, 
+            "gr_name": "root", 
+            "inode": 9458519, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "md5": "c0b3227317d09b789b8f9f7b8c9b8282", 
+            "mimetype": "text/plain", 
+            "mode": "0644", 
+            "mtime": 1605537843.0, 
+            "nlink": 1, 
+            "path": "/usr/lib/systemd/system/httpd.service", 
+            "pw_name": "root", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 752, 
+            "uid": 0, 
+            "version": "166428216", 
+            "wgrp": false, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    }
+}
+2021-12-02 15:43:15,847 p=28632 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2021-12-02 15:43:15,858 p=28632 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2021-12-02 15:43:15,866 p=28632 u=root |  TASK [nginx : httpdが存在している場合はサービスを停止] *******************************************************************************************************************************************************************************************
+2021-12-02 15:43:15,904 p=28632 u=root |  skipping: [web03]
+2021-12-02 15:43:15,915 p=28632 u=root |  skipping: [web04]
+2021-12-02 15:43:16,387 p=28632 u=root |  ok: [web01]
+2021-12-02 15:43:16,391 p=28632 u=root |  ok: [web02]
+2021-12-02 15:43:16,398 p=28632 u=root |  TASK [nginx : 実行結果（httpd停止）] ****************************************************************************************************************************************************************************************************
+2021-12-02 15:43:16,442 p=28632 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "enabled": false, 
+        "failed": false, 
+        "name": "httpd.service", 
+        "state": "stopped", 
+        "status": {
+            "ActiveEnterTimestampMonotonic": "0", 
+            "ActiveExitTimestampMonotonic": "0", 
+            "ActiveState": "inactive", 
+            "After": "-.mount basic.target nss-lookup.target tmp.mount systemd-journald.socket system.slice network.target remote-fs.target", 
+            "AllowIsolate": "no", 
+            "AmbientCapabilities": "0", 
+            "AssertResult": "no", 
+            "AssertTimestampMonotonic": "0", 
+            "Before": "shutdown.target", 
+            "BlockIOAccounting": "no", 
+            "BlockIOWeight": "18446744073709551615", 
+            "CPUAccounting": "no", 
+            "CPUQuotaPerSecUSec": "infinity", 
+            "CPUSchedulingPolicy": "0", 
+            "CPUSchedulingPriority": "0", 
+            "CPUSchedulingResetOnFork": "no", 
+            "CPUShares": "18446744073709551615", 
+            "CanIsolate": "no", 
+            "CanReload": "yes", 
+            "CanStart": "yes", 
+            "CanStop": "yes", 
+            "CapabilityBoundingSet": "18446744073709551615", 
+            "ConditionResult": "no", 
+            "ConditionTimestampMonotonic": "0", 
+            "Conflicts": "shutdown.target", 
+            "ControlPID": "0", 
+            "DefaultDependencies": "yes", 
+            "Delegate": "no", 
+            "Description": "The Apache HTTP Server", 
+            "DevicePolicy": "auto", 
+            "Documentation": "man:httpd(8) man:apachectl(8)", 
+            "EnvironmentFile": "/etc/sysconfig/httpd (ignore_errors=no)", 
+            "ExecMainCode": "0", 
+            "ExecMainExitTimestampMonotonic": "0", 
+            "ExecMainPID": "0", 
+            "ExecMainStartTimestampMonotonic": "0", 
+            "ExecMainStatus": "0", 
+            "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -WINCH ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "FailureAction": "none", 
+            "FileDescriptorStoreMax": "0", 
+            "FragmentPath": "/usr/lib/systemd/system/httpd.service", 
+            "GuessMainPID": "yes", 
+            "IOScheduling": "0", 
+            "Id": "httpd.service", 
+            "IgnoreOnIsolate": "no", 
+            "IgnoreOnSnapshot": "no", 
+            "IgnoreSIGPIPE": "yes", 
+            "InactiveEnterTimestampMonotonic": "0", 
+            "InactiveExitTimestampMonotonic": "0", 
+            "JobTimeoutAction": "none", 
+            "JobTimeoutUSec": "0", 
+            "KillMode": "control-group", 
+            "KillSignal": "18", 
+            "LimitAS": "18446744073709551615", 
+            "LimitCORE": "18446744073709551615", 
+            "LimitCPU": "18446744073709551615", 
+            "LimitDATA": "18446744073709551615", 
+            "LimitFSIZE": "18446744073709551615", 
+            "LimitLOCKS": "18446744073709551615", 
+            "LimitMEMLOCK": "65536", 
+            "LimitMSGQUEUE": "819200", 
+            "LimitNICE": "0", 
+            "LimitNOFILE": "4096", 
+            "LimitNPROC": "7261", 
+            "LimitRSS": "18446744073709551615", 
+            "LimitRTPRIO": "0", 
+            "LimitRTTIME": "18446744073709551615", 
+            "LimitSIGPENDING": "7261", 
+            "LimitSTACK": "18446744073709551615", 
+            "LoadState": "loaded", 
+            "MainPID": "0", 
+            "MemoryAccounting": "no", 
+            "MemoryCurrent": "18446744073709551615", 
+            "MemoryLimit": "18446744073709551615", 
+            "MountFlags": "0", 
+            "Names": "httpd.service", 
+            "NeedDaemonReload": "no", 
+            "Nice": "0", 
+            "NoNewPrivileges": "no", 
+            "NonBlocking": "no", 
+            "NotifyAccess": "main", 
+            "OOMScoreAdjust": "0", 
+            "OnFailureJobMode": "replace", 
+            "PermissionsStartOnly": "no", 
+            "PrivateDevices": "no", 
+            "PrivateNetwork": "no", 
+            "PrivateTmp": "yes", 
+            "ProtectHome": "no", 
+            "ProtectSystem": "no", 
+            "RefuseManualStart": "no", 
+            "RefuseManualStop": "no", 
+            "RemainAfterExit": "no", 
+            "Requires": "system.slice -.mount basic.target", 
+            "RequiresMountsFor": "/var/tmp", 
+            "Restart": "no", 
+            "RestartUSec": "100ms", 
+            "Result": "success", 
+            "RootDirectoryStartOnly": "no", 
+            "RuntimeDirectoryMode": "0755", 
+            "SameProcessGroup": "no", 
+            "SecureBits": "0", 
+            "SendSIGHUP": "no", 
+            "SendSIGKILL": "yes", 
+            "Slice": "system.slice", 
+            "StandardError": "inherit", 
+            "StandardInput": "null", 
+            "StandardOutput": "journal", 
+            "StartLimitAction": "none", 
+            "StartLimitBurst": "5", 
+            "StartLimitInterval": "10000000", 
+            "StartupBlockIOWeight": "18446744073709551615", 
+            "StartupCPUShares": "18446744073709551615", 
+            "StatusErrno": "0", 
+            "StopWhenUnneeded": "no", 
+            "SubState": "dead", 
+            "SyslogLevelPrefix": "yes", 
+            "SyslogPriority": "30", 
+            "SystemCallErrorNumber": "0", 
+            "TTYReset": "no", 
+            "TTYVHangup": "no", 
+            "TTYVTDisallocate": "no", 
+            "TasksAccounting": "no", 
+            "TasksCurrent": "18446744073709551615", 
+            "TasksMax": "18446744073709551615", 
+            "TimeoutStartUSec": "1min 30s", 
+            "TimeoutStopUSec": "1min 30s", 
+            "TimerSlackNSec": "50000", 
+            "Transient": "no", 
+            "Type": "notify", 
+            "UMask": "0022", 
+            "UnitFilePreset": "disabled", 
+            "UnitFileState": "disabled", 
+            "WatchdogTimestampMonotonic": "0", 
+            "WatchdogUSec": "0"
+        }
+    }
+}
+2021-12-02 15:43:16,452 p=28632 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "enabled": false, 
+        "failed": false, 
+        "name": "httpd.service", 
+        "state": "stopped", 
+        "status": {
+            "ActiveEnterTimestampMonotonic": "0", 
+            "ActiveExitTimestampMonotonic": "0", 
+            "ActiveState": "inactive", 
+            "After": "system.slice remote-fs.target tmp.mount systemd-journald.socket -.mount nss-lookup.target network.target basic.target", 
+            "AllowIsolate": "no", 
+            "AmbientCapabilities": "0", 
+            "AssertResult": "no", 
+            "AssertTimestampMonotonic": "0", 
+            "Before": "shutdown.target", 
+            "BlockIOAccounting": "no", 
+            "BlockIOWeight": "18446744073709551615", 
+            "CPUAccounting": "no", 
+            "CPUQuotaPerSecUSec": "infinity", 
+            "CPUSchedulingPolicy": "0", 
+            "CPUSchedulingPriority": "0", 
+            "CPUSchedulingResetOnFork": "no", 
+            "CPUShares": "18446744073709551615", 
+            "CanIsolate": "no", 
+            "CanReload": "yes", 
+            "CanStart": "yes", 
+            "CanStop": "yes", 
+            "CapabilityBoundingSet": "18446744073709551615", 
+            "ConditionResult": "no", 
+            "ConditionTimestampMonotonic": "0", 
+            "Conflicts": "shutdown.target", 
+            "ControlPID": "0", 
+            "DefaultDependencies": "yes", 
+            "Delegate": "no", 
+            "Description": "The Apache HTTP Server", 
+            "DevicePolicy": "auto", 
+            "Documentation": "man:httpd(8) man:apachectl(8)", 
+            "EnvironmentFile": "/etc/sysconfig/httpd (ignore_errors=no)", 
+            "ExecMainCode": "0", 
+            "ExecMainExitTimestampMonotonic": "0", 
+            "ExecMainPID": "0", 
+            "ExecMainStartTimestampMonotonic": "0", 
+            "ExecMainStatus": "0", 
+            "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -WINCH ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "FailureAction": "none", 
+            "FileDescriptorStoreMax": "0", 
+            "FragmentPath": "/usr/lib/systemd/system/httpd.service", 
+            "GuessMainPID": "yes", 
+            "IOScheduling": "0", 
+            "Id": "httpd.service", 
+            "IgnoreOnIsolate": "no", 
+            "IgnoreOnSnapshot": "no", 
+            "IgnoreSIGPIPE": "yes", 
+            "InactiveEnterTimestampMonotonic": "0", 
+            "InactiveExitTimestampMonotonic": "0", 
+            "JobTimeoutAction": "none", 
+            "JobTimeoutUSec": "0", 
+            "KillMode": "control-group", 
+            "KillSignal": "18", 
+            "LimitAS": "18446744073709551615", 
+            "LimitCORE": "18446744073709551615", 
+            "LimitCPU": "18446744073709551615", 
+            "LimitDATA": "18446744073709551615", 
+            "LimitFSIZE": "18446744073709551615", 
+            "LimitLOCKS": "18446744073709551615", 
+            "LimitMEMLOCK": "65536", 
+            "LimitMSGQUEUE": "819200", 
+            "LimitNICE": "0", 
+            "LimitNOFILE": "4096", 
+            "LimitNPROC": "7260", 
+            "LimitRSS": "18446744073709551615", 
+            "LimitRTPRIO": "0", 
+            "LimitRTTIME": "18446744073709551615", 
+            "LimitSIGPENDING": "7260", 
+            "LimitSTACK": "18446744073709551615", 
+            "LoadState": "loaded", 
+            "MainPID": "0", 
+            "MemoryAccounting": "no", 
+            "MemoryCurrent": "18446744073709551615", 
+            "MemoryLimit": "18446744073709551615", 
+            "MountFlags": "0", 
+            "Names": "httpd.service", 
+            "NeedDaemonReload": "no", 
+            "Nice": "0", 
+            "NoNewPrivileges": "no", 
+            "NonBlocking": "no", 
+            "NotifyAccess": "main", 
+            "OOMScoreAdjust": "0", 
+            "OnFailureJobMode": "replace", 
+            "PermissionsStartOnly": "no", 
+            "PrivateDevices": "no", 
+            "PrivateNetwork": "no", 
+            "PrivateTmp": "yes", 
+            "ProtectHome": "no", 
+            "ProtectSystem": "no", 
+            "RefuseManualStart": "no", 
+            "RefuseManualStop": "no", 
+            "RemainAfterExit": "no", 
+            "Requires": "-.mount basic.target system.slice", 
+            "RequiresMountsFor": "/var/tmp", 
+            "Restart": "no", 
+            "RestartUSec": "100ms", 
+            "Result": "success", 
+            "RootDirectoryStartOnly": "no", 
+            "RuntimeDirectoryMode": "0755", 
+            "SameProcessGroup": "no", 
+            "SecureBits": "0", 
+            "SendSIGHUP": "no", 
+            "SendSIGKILL": "yes", 
+            "Slice": "system.slice", 
+            "StandardError": "inherit", 
+            "StandardInput": "null", 
+            "StandardOutput": "journal", 
+            "StartLimitAction": "none", 
+            "StartLimitBurst": "5", 
+            "StartLimitInterval": "10000000", 
+            "StartupBlockIOWeight": "18446744073709551615", 
+            "StartupCPUShares": "18446744073709551615", 
+            "StatusErrno": "0", 
+            "StopWhenUnneeded": "no", 
+            "SubState": "dead", 
+            "SyslogLevelPrefix": "yes", 
+            "SyslogPriority": "30", 
+            "SystemCallErrorNumber": "0", 
+            "TTYReset": "no", 
+            "TTYVHangup": "no", 
+            "TTYVTDisallocate": "no", 
+            "TasksAccounting": "no", 
+            "TasksCurrent": "18446744073709551615", 
+            "TasksMax": "18446744073709551615", 
+            "TimeoutStartUSec": "1min 30s", 
+            "TimeoutStopUSec": "1min 30s", 
+            "TimerSlackNSec": "50000", 
+            "Transient": "no", 
+            "Type": "notify", 
+            "UMask": "0022", 
+            "UnitFilePreset": "disabled", 
+            "UnitFileState": "disabled", 
+            "WatchdogTimestampMonotonic": "0", 
+            "WatchdogUSec": "0"
+        }
+    }
+}
+2021-12-02 15:43:16,454 p=28632 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2021-12-02 15:43:16,465 p=28632 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2021-12-02 15:43:16,473 p=28632 u=root |  TASK [nginx : nginxの起動] *********************************************************************************************************************************************************************************************************
+2021-12-02 15:43:16,840 p=28632 u=root |  ok: [web03]
+2021-12-02 15:43:16,855 p=28632 u=root |  ok: [web01]
+2021-12-02 15:43:16,863 p=28632 u=root |  ok: [web04]
+2021-12-02 15:43:16,873 p=28632 u=root |  ok: [web02]
+2021-12-02 15:43:16,876 p=28632 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-02 15:43:16,876 p=28632 u=root |  web01                      : ok=20   changed=3    unreachable=0    failed=0   
+2021-12-02 15:43:16,876 p=28632 u=root |  web02                      : ok=19   changed=3    unreachable=0    failed=0   
+2021-12-02 15:43:16,876 p=28632 u=root |  web03                      : ok=18   changed=3    unreachable=0    failed=0   
+2021-12-02 15:43:16,876 p=28632 u=root |  web04                      : ok=18   changed=3    unreachable=0    failed=0   

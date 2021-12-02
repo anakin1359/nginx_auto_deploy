@@ -1,15 +1,15 @@
 ---
-  # - name: Ansible実行環境設定
-  #   import_tasks: ansible_env.yml
-  #   tags: [ ansible_env ]
+  - name: Ansible実行環境設定
+    import_tasks: ansible_env.yml
+    tags: [ ansible_env ]
 
-  # - name: nginxの設定
-  #   import_tasks: install_nginx.yml
-  #   tags: [ install_nginx ]
+  - name: nginxの設定
+    import_tasks: install_nginx.yml
+    tags: [ install_nginx ]
   
-  # - name: nginxの環境設定
-  #   import_tasks: setup_nginx.yml
-  #   tags: [ setup_nginx ]
+  - name: nginxの環境設定
+    import_tasks: setup_nginx.yml
+    tags: [ setup_nginx ]
 
   - name: nginx_processの起動
     import_tasks: startup_nginx.yml

@@ -1,45 +1,29 @@
 Role Name
 =========
+* nginx: Nginxサーバの設定を行うRole
+* wordpress: Wordpressの設定を行うRole
 
-A brief description of the role goes here.
-
-Requirements
-------------
-
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
-
-Role Variables
+Variables
 --------------
+* group_vars
+  * work_usr: 公開用ディレクトリの所有者/グループを指定してください
+  * public_dir: 「/var/www/${work_usr}」がNginxを起動した際の公開ディレクトリとなります
+  * etc: 「./roles/nginx/file/default.conf」内の`location`先を上記の`public_dir`と合わせる必要があります
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+etc
+--------------
+* OS: centos7以降のみ動作します（centos6以前は正常に動作するようにしていません）
 
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
-
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
-# nginx_auto_deploy
+Playbook
+--------------
 * Connection test
 ```
 ansible system1 -m ping -i hosts/develop_nginx_server
+```
+
+* Dryrun
+```
+ansible-playbook -i hosts/develop_nginx_server nginx.yml --check
 ```
 
 * Run the playbook
