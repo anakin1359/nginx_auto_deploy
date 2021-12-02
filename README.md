@@ -1,7 +1,7 @@
 Role Name
 =========
-* nginx: Nginxサーバの設定を行うRole
-* wordpress: Wordpressの設定を行うRole
+* `nginx`: Nginxサーバの設定を行うRole
+* `wordpress`: Wordpressの設定を行うRole
 
 Variables
 --------------
@@ -12,7 +12,13 @@ Variables
 
 etc
 --------------
-* OS: centos7以降のみ動作します（centos6以前は正常に動作するようにしていません）
+* 実行環境:
+  * Python 2.7.5
+  * Ansible 2.4.0.0 
+  * CentOS Linux release 7.8.2003 (Core) ※centos6以前は正常に動作するようにしていません
+
+* playbook
+  * serialで実行するように設定しています（並列処理を行う場合は`nginx.yml`の「serial: 1」をコメントアウトしてください）
 
 Playbook
 --------------

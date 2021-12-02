@@ -11208,3 +11208,1128 @@ The offending line appears to be:
 2021-12-02 15:43:16,876 p=28632 u=root |  web02                      : ok=19   changed=3    unreachable=0    failed=0   
 2021-12-02 15:43:16,876 p=28632 u=root |  web03                      : ok=18   changed=3    unreachable=0    failed=0   
 2021-12-02 15:43:16,876 p=28632 u=root |  web04                      : ok=18   changed=3    unreachable=0    failed=0   
+2021-12-02 16:21:44,687 p=31204 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-02 16:21:46,177 p=31204 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-02 16:21:46,182 p=31204 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-02 16:21:47,195 p=31204 u=root |  ok: [web01]
+2021-12-02 16:21:50,705 p=31204 u=root |  Perform task: TASK: nginx : 作業用ユーザ作成 (N)o/(y)es/(c)ontinue: *********************************************************************************************************************************************************************
+2021-12-02 16:21:50,712 p=31204 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-02 16:21:51,289 p=31204 u=root |  ok: [web01]
+2021-12-02 16:21:52,665 p=31204 u=root |  Perform task: TASK: nginx : 作業ディレクトリ作成 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-02 16:21:52,671 p=31204 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-02 16:21:53,163 p=31204 u=root |  ok: [web01]
+2021-12-02 16:21:53,170 p=31204 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-02 16:21:53,652 p=31204 u=root |  ok: [web01]
+2021-12-02 16:21:53,660 p=31204 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-02 16:22:10,767 p=31204 u=root |  ok: [web01] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 16:22:10,774 p=31204 u=root |  TASK [nginx : utilityツールのインストール結果] **********************************************************************************************************************************************************************************************
+2021-12-02 16:22:10,813 p=31204 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 16:22:10,821 p=31204 u=root |  TASK [nginx : nginx.repoを転送] ****************************************************************************************************************************************************************************************************
+2021-12-02 16:22:11,533 p=31204 u=root |  ok: [web01]
+2021-12-02 16:22:11,541 p=31204 u=root |  TASK [nginx : nginxをインストール] *****************************************************************************************************************************************************************************************************
+2021-12-02 16:22:16,524 p=31204 u=root |  ok: [web01] => (item=[u'nginx'])
+2021-12-02 16:22:16,532 p=31204 u=root |  TASK [nginx : nginxのインストール結果] ***************************************************************************************************************************************************************************************************
+2021-12-02 16:22:16,568 p=31204 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 16:22:16,576 p=31204 u=root |  TASK [nginx : check] ************************************************************************************************************************************************************************************************************
+2021-12-02 16:22:16,606 p=31204 u=root |  [nginx : check]
+"各サーバで「nginx -v」を実行し、nginxが正しくインストールされていることが確認できたら進みましょう"
+:
+2021-12-02 16:22:23,659 p=31204 u=root |  ok: [web01]
+2021-12-02 16:22:23,667 p=31204 u=root |  TASK [nginx : 公開用ディレクトリを作成] *****************************************************************************************************************************************************************************************************
+2021-12-02 16:22:24,025 p=31204 u=root |  ok: [web01]
+2021-12-02 16:22:24,033 p=31204 u=root |  TASK [nginx : topページ（index.html）を公開ディレクトリに配置] ***********************************************************************************************************************************************************************************
+2021-12-02 16:22:24,886 p=31204 u=root |  ok: [web01]
+2021-12-02 16:22:24,893 p=31204 u=root |  TASK [nginx : default.confを転送] **************************************************************************************************************************************************************************************************
+2021-12-02 16:22:25,260 p=31204 u=root |  changed: [web01]
+2021-12-02 16:22:25,268 p=31204 u=root |  TASK [nginx : default.confのbackup] **********************************************************************************************************************************************************************************************
+2021-12-02 16:22:25,743 p=31204 u=root |  skipping: [web01]
+2021-12-02 16:22:25,751 p=31204 u=root |  TASK [nginx : default.confの設定(listen-port指定)] ***********************************************************************************************************************************************************************************
+2021-12-02 16:22:26,102 p=31204 u=root |  skipping: [web01]
+2021-12-02 16:22:26,109 p=31204 u=root |  TASK [nginx : httpdが存在しているかの確認] *************************************************************************************************************************************************************************************************
+2021-12-02 16:22:26,476 p=31204 u=root |  ok: [web01]
+2021-12-02 16:22:26,483 p=31204 u=root |  TASK [nginx : 実行結果（httpd存在性）] ***************************************************************************************************************************************************************************************************
+2021-12-02 16:22:26,520 p=31204 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1638424857.8919704, 
+            "attr_flags": "", 
+            "attributes": [], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "us-ascii", 
+            "checksum": "c7ec7c6c718f834e233aca76674f08f56ab53a50", 
+            "ctime": 1626334672.1038928, 
+            "dev": 64768, 
+            "device_type": 0, 
+            "executable": false, 
+            "exists": true, 
+            "gid": 0, 
+            "gr_name": "root", 
+            "inode": 9210063, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "md5": "c0b3227317d09b789b8f9f7b8c9b8282", 
+            "mimetype": "text/plain", 
+            "mode": "0644", 
+            "mtime": 1605537843.0, 
+            "nlink": 1, 
+            "path": "/usr/lib/systemd/system/httpd.service", 
+            "pw_name": "root", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 752, 
+            "uid": 0, 
+            "version": "990675519", 
+            "wgrp": false, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    }
+}
+2021-12-02 16:22:26,528 p=31204 u=root |  TASK [nginx : httpdが存在している場合はサービスを停止] *******************************************************************************************************************************************************************************************
+2021-12-02 16:22:27,049 p=31204 u=root |  ok: [web01]
+2021-12-02 16:22:27,056 p=31204 u=root |  TASK [nginx : 実行結果（httpd停止）] ****************************************************************************************************************************************************************************************************
+2021-12-02 16:22:27,096 p=31204 u=root |  ok: [web01] => {
+    "msg": {
+        "changed": false, 
+        "enabled": false, 
+        "failed": false, 
+        "name": "httpd.service", 
+        "state": "stopped", 
+        "status": {
+            "ActiveEnterTimestampMonotonic": "0", 
+            "ActiveExitTimestampMonotonic": "0", 
+            "ActiveState": "inactive", 
+            "After": "nss-lookup.target network.target system.slice systemd-journald.socket basic.target remote-fs.target tmp.mount -.mount", 
+            "AllowIsolate": "no", 
+            "AmbientCapabilities": "0", 
+            "AssertResult": "no", 
+            "AssertTimestampMonotonic": "0", 
+            "Before": "shutdown.target", 
+            "BlockIOAccounting": "no", 
+            "BlockIOWeight": "18446744073709551615", 
+            "CPUAccounting": "no", 
+            "CPUQuotaPerSecUSec": "infinity", 
+            "CPUSchedulingPolicy": "0", 
+            "CPUSchedulingPriority": "0", 
+            "CPUSchedulingResetOnFork": "no", 
+            "CPUShares": "18446744073709551615", 
+            "CanIsolate": "no", 
+            "CanReload": "yes", 
+            "CanStart": "yes", 
+            "CanStop": "yes", 
+            "CapabilityBoundingSet": "18446744073709551615", 
+            "ConditionResult": "no", 
+            "ConditionTimestampMonotonic": "0", 
+            "Conflicts": "shutdown.target", 
+            "ControlPID": "0", 
+            "DefaultDependencies": "yes", 
+            "Delegate": "no", 
+            "Description": "The Apache HTTP Server", 
+            "DevicePolicy": "auto", 
+            "Documentation": "man:httpd(8) man:apachectl(8)", 
+            "EnvironmentFile": "/etc/sysconfig/httpd (ignore_errors=no)", 
+            "ExecMainCode": "0", 
+            "ExecMainExitTimestampMonotonic": "0", 
+            "ExecMainPID": "0", 
+            "ExecMainStartTimestampMonotonic": "0", 
+            "ExecMainStatus": "0", 
+            "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -WINCH ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "FailureAction": "none", 
+            "FileDescriptorStoreMax": "0", 
+            "FragmentPath": "/usr/lib/systemd/system/httpd.service", 
+            "GuessMainPID": "yes", 
+            "IOScheduling": "0", 
+            "Id": "httpd.service", 
+            "IgnoreOnIsolate": "no", 
+            "IgnoreOnSnapshot": "no", 
+            "IgnoreSIGPIPE": "yes", 
+            "InactiveEnterTimestampMonotonic": "0", 
+            "InactiveExitTimestampMonotonic": "0", 
+            "JobTimeoutAction": "none", 
+            "JobTimeoutUSec": "0", 
+            "KillMode": "control-group", 
+            "KillSignal": "18", 
+            "LimitAS": "18446744073709551615", 
+            "LimitCORE": "18446744073709551615", 
+            "LimitCPU": "18446744073709551615", 
+            "LimitDATA": "18446744073709551615", 
+            "LimitFSIZE": "18446744073709551615", 
+            "LimitLOCKS": "18446744073709551615", 
+            "LimitMEMLOCK": "65536", 
+            "LimitMSGQUEUE": "819200", 
+            "LimitNICE": "0", 
+            "LimitNOFILE": "4096", 
+            "LimitNPROC": "7261", 
+            "LimitRSS": "18446744073709551615", 
+            "LimitRTPRIO": "0", 
+            "LimitRTTIME": "18446744073709551615", 
+            "LimitSIGPENDING": "7261", 
+            "LimitSTACK": "18446744073709551615", 
+            "LoadState": "loaded", 
+            "MainPID": "0", 
+            "MemoryAccounting": "no", 
+            "MemoryCurrent": "18446744073709551615", 
+            "MemoryLimit": "18446744073709551615", 
+            "MountFlags": "0", 
+            "Names": "httpd.service", 
+            "NeedDaemonReload": "no", 
+            "Nice": "0", 
+            "NoNewPrivileges": "no", 
+            "NonBlocking": "no", 
+            "NotifyAccess": "main", 
+            "OOMScoreAdjust": "0", 
+            "OnFailureJobMode": "replace", 
+            "PermissionsStartOnly": "no", 
+            "PrivateDevices": "no", 
+            "PrivateNetwork": "no", 
+            "PrivateTmp": "yes", 
+            "ProtectHome": "no", 
+            "ProtectSystem": "no", 
+            "RefuseManualStart": "no", 
+            "RefuseManualStop": "no", 
+            "RemainAfterExit": "no", 
+            "Requires": "system.slice -.mount basic.target", 
+            "RequiresMountsFor": "/var/tmp", 
+            "Restart": "no", 
+            "RestartUSec": "100ms", 
+            "Result": "success", 
+            "RootDirectoryStartOnly": "no", 
+            "RuntimeDirectoryMode": "0755", 
+            "SameProcessGroup": "no", 
+            "SecureBits": "0", 
+            "SendSIGHUP": "no", 
+            "SendSIGKILL": "yes", 
+            "Slice": "system.slice", 
+            "StandardError": "inherit", 
+            "StandardInput": "null", 
+            "StandardOutput": "journal", 
+            "StartLimitAction": "none", 
+            "StartLimitBurst": "5", 
+            "StartLimitInterval": "10000000", 
+            "StartupBlockIOWeight": "18446744073709551615", 
+            "StartupCPUShares": "18446744073709551615", 
+            "StatusErrno": "0", 
+            "StopWhenUnneeded": "no", 
+            "SubState": "dead", 
+            "SyslogLevelPrefix": "yes", 
+            "SyslogPriority": "30", 
+            "SystemCallErrorNumber": "0", 
+            "TTYReset": "no", 
+            "TTYVHangup": "no", 
+            "TTYVTDisallocate": "no", 
+            "TasksAccounting": "no", 
+            "TasksCurrent": "18446744073709551615", 
+            "TasksMax": "18446744073709551615", 
+            "TimeoutStartUSec": "1min 30s", 
+            "TimeoutStopUSec": "1min 30s", 
+            "TimerSlackNSec": "50000", 
+            "Transient": "no", 
+            "Type": "notify", 
+            "UMask": "0022", 
+            "UnitFilePreset": "disabled", 
+            "UnitFileState": "disabled", 
+            "WatchdogTimestampMonotonic": "0", 
+            "WatchdogUSec": "0"
+        }
+    }
+}
+2021-12-02 16:22:27,104 p=31204 u=root |  TASK [nginx : nginxの起動] *********************************************************************************************************************************************************************************************************
+2021-12-02 16:22:27,478 p=31204 u=root |  ok: [web01]
+2021-12-02 16:22:27,483 p=31204 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-02 16:22:32,768 p=31204 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-02 16:22:32,773 p=31204 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-02 16:22:33,516 p=31204 u=root |  ok: [web02]
+2021-12-02 16:22:35,473 p=31204 u=root |  Perform task: TASK: nginx : 作業用ユーザ作成 (N)o/(y)es/(c)ontinue: *********************************************************************************************************************************************************************
+2021-12-02 16:22:35,479 p=31204 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-02 16:22:35,878 p=31204 u=root |  ok: [web02]
+2021-12-02 16:22:37,160 p=31204 u=root |  Perform task: TASK: nginx : 作業ディレクトリ作成 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-02 16:22:37,168 p=31204 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-02 16:22:37,538 p=31204 u=root |  ok: [web02]
+2021-12-02 16:22:39,017 p=31204 u=root |  Perform task: TASK: nginx : SELinux無効化 (N)o/(y)es/(c)ontinue: *******************************************************************************************************************************************************************
+2021-12-02 16:22:39,024 p=31204 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-02 16:22:39,389 p=31204 u=root |  ok: [web02]
+2021-12-02 16:22:40,600 p=31204 u=root |  Perform task: TASK: nginx : utilityツールをインストール (N)o/(y)es/(c)ontinue: ************************************************************************************************************************************************************
+2021-12-02 16:22:40,607 p=31204 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-02 16:23:01,598 p=31204 u=root |  ok: [web02] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 16:23:08,956 p=31204 u=root |  Perform task: TASK: nginx : utilityツールのインストール結果 (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************
+2021-12-02 16:23:08,963 p=31204 u=root |  TASK [nginx : utilityツールのインストール結果] **********************************************************************************************************************************************************************************************
+2021-12-02 16:23:09,001 p=31204 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 16:23:09,009 p=31204 u=root |  TASK [nginx : nginx.repoを転送] ****************************************************************************************************************************************************************************************************
+2021-12-02 16:23:09,638 p=31204 u=root |  ok: [web02]
+2021-12-02 16:23:09,645 p=31204 u=root |  TASK [nginx : nginxをインストール] *****************************************************************************************************************************************************************************************************
+2021-12-02 16:23:17,397 p=31204 u=root |  ok: [web02] => (item=[u'nginx'])
+2021-12-02 16:23:17,405 p=31204 u=root |  TASK [nginx : nginxのインストール結果] ***************************************************************************************************************************************************************************************************
+2021-12-02 16:23:17,443 p=31204 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 16:23:17,451 p=31204 u=root |  TASK [nginx : check] ************************************************************************************************************************************************************************************************************
+2021-12-02 16:23:17,482 p=31204 u=root |  [nginx : check]
+"各サーバで「nginx -v」を実行し、nginxが正しくインストールされていることが確認できたら進みましょう"
+:
+2021-12-02 16:23:21,787 p=31204 u=root |  ok: [web02]
+2021-12-02 16:23:21,795 p=31204 u=root |  TASK [nginx : 公開用ディレクトリを作成] *****************************************************************************************************************************************************************************************************
+2021-12-02 16:23:22,164 p=31204 u=root |  ok: [web02]
+2021-12-02 16:23:22,171 p=31204 u=root |  TASK [nginx : topページ（index.html）を公開ディレクトリに配置] ***********************************************************************************************************************************************************************************
+2021-12-02 16:23:23,055 p=31204 u=root |  ok: [web02]
+2021-12-02 16:23:23,062 p=31204 u=root |  TASK [nginx : default.confを転送] **************************************************************************************************************************************************************************************************
+2021-12-02 16:23:23,470 p=31204 u=root |  changed: [web02]
+2021-12-02 16:23:23,478 p=31204 u=root |  TASK [nginx : default.confのbackup] **********************************************************************************************************************************************************************************************
+2021-12-02 16:23:23,840 p=31204 u=root |  skipping: [web02]
+2021-12-02 16:23:23,848 p=31204 u=root |  TASK [nginx : default.confの設定(listen-port指定)] ***********************************************************************************************************************************************************************************
+2021-12-02 16:23:24,208 p=31204 u=root |  skipping: [web02]
+2021-12-02 16:23:24,216 p=31204 u=root |  TASK [nginx : httpdが存在しているかの確認] *************************************************************************************************************************************************************************************************
+2021-12-02 16:23:24,598 p=31204 u=root |  ok: [web02]
+2021-12-02 16:23:24,605 p=31204 u=root |  TASK [nginx : 実行結果（httpd存在性）] ***************************************************************************************************************************************************************************************************
+2021-12-02 16:23:24,643 p=31204 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "atime": 1638425711.7552905, 
+            "attr_flags": "", 
+            "attributes": [], 
+            "block_size": 4096, 
+            "blocks": 8, 
+            "charset": "us-ascii", 
+            "checksum": "c7ec7c6c718f834e233aca76674f08f56ab53a50", 
+            "ctime": 1626334666.811114, 
+            "dev": 64768, 
+            "device_type": 0, 
+            "executable": false, 
+            "exists": true, 
+            "gid": 0, 
+            "gr_name": "root", 
+            "inode": 9458519, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "md5": "c0b3227317d09b789b8f9f7b8c9b8282", 
+            "mimetype": "text/plain", 
+            "mode": "0644", 
+            "mtime": 1605537843.0, 
+            "nlink": 1, 
+            "path": "/usr/lib/systemd/system/httpd.service", 
+            "pw_name": "root", 
+            "readable": true, 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 752, 
+            "uid": 0, 
+            "version": "166428216", 
+            "wgrp": false, 
+            "woth": false, 
+            "writeable": true, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    }
+}
+2021-12-02 16:23:24,650 p=31204 u=root |  TASK [nginx : httpdが存在している場合はサービスを停止] *******************************************************************************************************************************************************************************************
+2021-12-02 16:23:25,040 p=31204 u=root |  ok: [web02]
+2021-12-02 16:23:25,047 p=31204 u=root |  TASK [nginx : 実行結果（httpd停止）] ****************************************************************************************************************************************************************************************************
+2021-12-02 16:23:25,117 p=31204 u=root |  ok: [web02] => {
+    "msg": {
+        "changed": false, 
+        "enabled": false, 
+        "failed": false, 
+        "name": "httpd.service", 
+        "state": "stopped", 
+        "status": {
+            "ActiveEnterTimestampMonotonic": "0", 
+            "ActiveExitTimestampMonotonic": "0", 
+            "ActiveState": "inactive", 
+            "After": "tmp.mount network.target -.mount system.slice nss-lookup.target basic.target systemd-journald.socket remote-fs.target", 
+            "AllowIsolate": "no", 
+            "AmbientCapabilities": "0", 
+            "AssertResult": "no", 
+            "AssertTimestampMonotonic": "0", 
+            "Before": "shutdown.target", 
+            "BlockIOAccounting": "no", 
+            "BlockIOWeight": "18446744073709551615", 
+            "CPUAccounting": "no", 
+            "CPUQuotaPerSecUSec": "infinity", 
+            "CPUSchedulingPolicy": "0", 
+            "CPUSchedulingPriority": "0", 
+            "CPUSchedulingResetOnFork": "no", 
+            "CPUShares": "18446744073709551615", 
+            "CanIsolate": "no", 
+            "CanReload": "yes", 
+            "CanStart": "yes", 
+            "CanStop": "yes", 
+            "CapabilityBoundingSet": "18446744073709551615", 
+            "ConditionResult": "no", 
+            "ConditionTimestampMonotonic": "0", 
+            "Conflicts": "shutdown.target", 
+            "ControlPID": "0", 
+            "DefaultDependencies": "yes", 
+            "Delegate": "no", 
+            "Description": "The Apache HTTP Server", 
+            "DevicePolicy": "auto", 
+            "Documentation": "man:httpd(8) man:apachectl(8)", 
+            "EnvironmentFile": "/etc/sysconfig/httpd (ignore_errors=no)", 
+            "ExecMainCode": "0", 
+            "ExecMainExitTimestampMonotonic": "0", 
+            "ExecMainPID": "0", 
+            "ExecMainStartTimestampMonotonic": "0", 
+            "ExecMainStatus": "0", 
+            "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "ExecStop": "{ path=/bin/kill ; argv[]=/bin/kill -WINCH ${MAINPID} ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", 
+            "FailureAction": "none", 
+            "FileDescriptorStoreMax": "0", 
+            "FragmentPath": "/usr/lib/systemd/system/httpd.service", 
+            "GuessMainPID": "yes", 
+            "IOScheduling": "0", 
+            "Id": "httpd.service", 
+            "IgnoreOnIsolate": "no", 
+            "IgnoreOnSnapshot": "no", 
+            "IgnoreSIGPIPE": "yes", 
+            "InactiveEnterTimestampMonotonic": "0", 
+            "InactiveExitTimestampMonotonic": "0", 
+            "JobTimeoutAction": "none", 
+            "JobTimeoutUSec": "0", 
+            "KillMode": "control-group", 
+            "KillSignal": "18", 
+            "LimitAS": "18446744073709551615", 
+            "LimitCORE": "18446744073709551615", 
+            "LimitCPU": "18446744073709551615", 
+            "LimitDATA": "18446744073709551615", 
+            "LimitFSIZE": "18446744073709551615", 
+            "LimitLOCKS": "18446744073709551615", 
+            "LimitMEMLOCK": "65536", 
+            "LimitMSGQUEUE": "819200", 
+            "LimitNICE": "0", 
+            "LimitNOFILE": "4096", 
+            "LimitNPROC": "7260", 
+            "LimitRSS": "18446744073709551615", 
+            "LimitRTPRIO": "0", 
+            "LimitRTTIME": "18446744073709551615", 
+            "LimitSIGPENDING": "7260", 
+            "LimitSTACK": "18446744073709551615", 
+            "LoadState": "loaded", 
+            "MainPID": "0", 
+            "MemoryAccounting": "no", 
+            "MemoryCurrent": "18446744073709551615", 
+            "MemoryLimit": "18446744073709551615", 
+            "MountFlags": "0", 
+            "Names": "httpd.service", 
+            "NeedDaemonReload": "no", 
+            "Nice": "0", 
+            "NoNewPrivileges": "no", 
+            "NonBlocking": "no", 
+            "NotifyAccess": "main", 
+            "OOMScoreAdjust": "0", 
+            "OnFailureJobMode": "replace", 
+            "PermissionsStartOnly": "no", 
+            "PrivateDevices": "no", 
+            "PrivateNetwork": "no", 
+            "PrivateTmp": "yes", 
+            "ProtectHome": "no", 
+            "ProtectSystem": "no", 
+            "RefuseManualStart": "no", 
+            "RefuseManualStop": "no", 
+            "RemainAfterExit": "no", 
+            "Requires": "-.mount basic.target system.slice", 
+            "RequiresMountsFor": "/var/tmp", 
+            "Restart": "no", 
+            "RestartUSec": "100ms", 
+            "Result": "success", 
+            "RootDirectoryStartOnly": "no", 
+            "RuntimeDirectoryMode": "0755", 
+            "SameProcessGroup": "no", 
+            "SecureBits": "0", 
+            "SendSIGHUP": "no", 
+            "SendSIGKILL": "yes", 
+            "Slice": "system.slice", 
+            "StandardError": "inherit", 
+            "StandardInput": "null", 
+            "StandardOutput": "journal", 
+            "StartLimitAction": "none", 
+            "StartLimitBurst": "5", 
+            "StartLimitInterval": "10000000", 
+            "StartupBlockIOWeight": "18446744073709551615", 
+            "StartupCPUShares": "18446744073709551615", 
+            "StatusErrno": "0", 
+            "StopWhenUnneeded": "no", 
+            "SubState": "dead", 
+            "SyslogLevelPrefix": "yes", 
+            "SyslogPriority": "30", 
+            "SystemCallErrorNumber": "0", 
+            "TTYReset": "no", 
+            "TTYVHangup": "no", 
+            "TTYVTDisallocate": "no", 
+            "TasksAccounting": "no", 
+            "TasksCurrent": "18446744073709551615", 
+            "TasksMax": "18446744073709551615", 
+            "TimeoutStartUSec": "1min 30s", 
+            "TimeoutStopUSec": "1min 30s", 
+            "TimerSlackNSec": "50000", 
+            "Transient": "no", 
+            "Type": "notify", 
+            "UMask": "0022", 
+            "UnitFilePreset": "disabled", 
+            "UnitFileState": "disabled", 
+            "WatchdogTimestampMonotonic": "0", 
+            "WatchdogUSec": "0"
+        }
+    }
+}
+2021-12-02 16:23:25,124 p=31204 u=root |  TASK [nginx : nginxの起動] *********************************************************************************************************************************************************************************************************
+2021-12-02 16:23:25,534 p=31204 u=root |  ok: [web02]
+2021-12-02 16:23:25,539 p=31204 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-02 16:23:32,217 p=31204 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-02 16:23:32,221 p=31204 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-02 16:23:32,882 p=31204 u=root |  ok: [web03]
+2021-12-02 16:23:35,929 p=31204 u=root |  Perform task: TASK: nginx : 作業用ユーザ作成 (N)o/(y)es/(c)ontinue: *********************************************************************************************************************************************************************
+2021-12-02 16:23:35,937 p=31204 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-02 16:23:36,292 p=31204 u=root |  ok: [web03]
+2021-12-02 16:23:36,299 p=31204 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-02 16:23:36,656 p=31204 u=root |  ok: [web03]
+2021-12-02 16:23:36,665 p=31204 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-02 16:23:37,014 p=31204 u=root |  ok: [web03]
+2021-12-02 16:23:37,022 p=31204 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-02 16:23:58,889 p=31204 u=root |  ok: [web03] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 16:23:58,897 p=31204 u=root |  TASK [nginx : utilityツールのインストール結果] **********************************************************************************************************************************************************************************************
+2021-12-02 16:23:58,937 p=31204 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 16:23:58,945 p=31204 u=root |  TASK [nginx : nginx.repoを転送] ****************************************************************************************************************************************************************************************************
+2021-12-02 16:23:59,518 p=31204 u=root |  ok: [web03]
+2021-12-02 16:23:59,526 p=31204 u=root |  TASK [nginx : nginxをインストール] *****************************************************************************************************************************************************************************************************
+2021-12-02 16:24:04,177 p=31204 u=root |  ok: [web03] => (item=[u'nginx'])
+2021-12-02 16:24:04,185 p=31204 u=root |  TASK [nginx : nginxのインストール結果] ***************************************************************************************************************************************************************************************************
+2021-12-02 16:24:04,252 p=31204 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 16:24:04,260 p=31204 u=root |  TASK [nginx : check] ************************************************************************************************************************************************************************************************************
+2021-12-02 16:24:04,326 p=31204 u=root |  [nginx : check]
+"各サーバで「nginx -v」を実行し、nginxが正しくインストールされていることが確認できたら進みましょう"
+:
+2021-12-02 16:24:20,443 p=31204 u=root |  ok: [web03]
+2021-12-02 16:24:20,451 p=31204 u=root |  TASK [nginx : 公開用ディレクトリを作成] *****************************************************************************************************************************************************************************************************
+2021-12-02 16:24:20,812 p=31204 u=root |  ok: [web03]
+2021-12-02 16:24:20,820 p=31204 u=root |  TASK [nginx : topページ（index.html）を公開ディレクトリに配置] ***********************************************************************************************************************************************************************************
+2021-12-02 16:24:21,636 p=31204 u=root |  ok: [web03]
+2021-12-02 16:24:21,644 p=31204 u=root |  TASK [nginx : default.confを転送] **************************************************************************************************************************************************************************************************
+2021-12-02 16:24:21,993 p=31204 u=root |  changed: [web03]
+2021-12-02 16:24:22,001 p=31204 u=root |  TASK [nginx : default.confのbackup] **********************************************************************************************************************************************************************************************
+2021-12-02 16:24:22,352 p=31204 u=root |  skipping: [web03]
+2021-12-02 16:24:22,360 p=31204 u=root |  TASK [nginx : default.confの設定(listen-port指定)] ***********************************************************************************************************************************************************************************
+2021-12-02 16:24:22,713 p=31204 u=root |  skipping: [web03]
+2021-12-02 16:24:22,721 p=31204 u=root |  TASK [nginx : httpdが存在しているかの確認] *************************************************************************************************************************************************************************************************
+2021-12-02 16:24:23,077 p=31204 u=root |  ok: [web03]
+2021-12-02 16:24:23,085 p=31204 u=root |  TASK [nginx : 実行結果（httpd存在性）] ***************************************************************************************************************************************************************************************************
+2021-12-02 16:24:23,121 p=31204 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2021-12-02 16:24:23,129 p=31204 u=root |  TASK [nginx : httpdが存在している場合はサービスを停止] *******************************************************************************************************************************************************************************************
+2021-12-02 16:24:23,146 p=31204 u=root |  skipping: [web03]
+2021-12-02 16:24:23,154 p=31204 u=root |  TASK [nginx : 実行結果（httpd停止）] ****************************************************************************************************************************************************************************************************
+2021-12-02 16:24:23,189 p=31204 u=root |  ok: [web03] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2021-12-02 16:24:23,198 p=31204 u=root |  TASK [nginx : nginxの起動] *********************************************************************************************************************************************************************************************************
+2021-12-02 16:24:23,545 p=31204 u=root |  ok: [web03]
+2021-12-02 16:24:23,550 p=31204 u=root |  PLAY [nginx_auto_deploy] ********************************************************************************************************************************************************************************************************
+2021-12-02 16:24:28,032 p=31204 u=root |  Perform task: TASK: Gathering Facts (N)o/(y)es/(c)ontinue: **********************************************************************************************************************************************************************
+2021-12-02 16:24:28,036 p=31204 u=root |  TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************
+2021-12-02 16:24:28,796 p=31204 u=root |  ok: [web04]
+2021-12-02 16:24:28,804 p=31204 u=root |  TASK [nginx : 作業用ユーザ作成] *********************************************************************************************************************************************************************************************************
+2021-12-02 16:24:29,201 p=31204 u=root |  ok: [web04]
+2021-12-02 16:24:29,209 p=31204 u=root |  TASK [nginx : 作業ディレクトリ作成] *******************************************************************************************************************************************************************************************************
+2021-12-02 16:24:29,575 p=31204 u=root |  ok: [web04]
+2021-12-02 16:24:29,583 p=31204 u=root |  TASK [nginx : SELinux無効化] *******************************************************************************************************************************************************************************************************
+2021-12-02 16:24:29,916 p=31204 u=root |  ok: [web04]
+2021-12-02 16:24:29,923 p=31204 u=root |  TASK [nginx : utilityツールをインストール] ************************************************************************************************************************************************************************************************
+2021-12-02 16:24:48,360 p=31204 u=root |  ok: [web04] => (item=[u'yum-utils', u'telnet', u'vim-enhanced', u'bind-utils', u'net-tools', u'nmap', u'psmisc', u'rlwrap', u'traceroute', u'tree', u'wget', u'open-vm-tools'])
+2021-12-02 16:24:48,368 p=31204 u=root |  TASK [nginx : utilityツールのインストール結果] **********************************************************************************************************************************************************************************************
+2021-12-02 16:24:48,440 p=31204 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "yum-utils", 
+                            "telnet", 
+                            "vim-enhanced", 
+                            "bind-utils", 
+                            "net-tools", 
+                            "nmap", 
+                            "psmisc", 
+                            "rlwrap", 
+                            "traceroute", 
+                            "tree", 
+                            "wget", 
+                            "open-vm-tools"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "yum-utils", 
+                    "telnet", 
+                    "vim-enhanced", 
+                    "bind-utils", 
+                    "net-tools", 
+                    "nmap", 
+                    "psmisc", 
+                    "rlwrap", 
+                    "traceroute", 
+                    "tree", 
+                    "wget", 
+                    "open-vm-tools"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing yum-utils are up to date", 
+                    "All packages providing telnet are up to date", 
+                    "All packages providing vim-enhanced are up to date", 
+                    "All packages providing bind-utils are up to date", 
+                    "All packages providing net-tools are up to date", 
+                    "All packages providing nmap are up to date", 
+                    "All packages providing psmisc are up to date", 
+                    "All packages providing rlwrap are up to date", 
+                    "All packages providing traceroute are up to date", 
+                    "All packages providing tree are up to date", 
+                    "All packages providing wget are up to date", 
+                    "All packages providing open-vm-tools are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 16:24:48,447 p=31204 u=root |  TASK [nginx : nginx.repoを転送] ****************************************************************************************************************************************************************************************************
+2021-12-02 16:24:49,072 p=31204 u=root |  ok: [web04]
+2021-12-02 16:24:49,080 p=31204 u=root |  TASK [nginx : nginxをインストール] *****************************************************************************************************************************************************************************************************
+2021-12-02 16:24:52,935 p=31204 u=root |  ok: [web04] => (item=[u'nginx'])
+2021-12-02 16:24:52,943 p=31204 u=root |  TASK [nginx : nginxのインストール結果] ***************************************************************************************************************************************************************************************************
+2021-12-02 16:24:53,013 p=31204 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "_ansible_item_result": true, 
+                "_ansible_no_log": false, 
+                "_ansible_parsed": true, 
+                "changed": false, 
+                "changes": {
+                    "installed": [], 
+                    "updated": []
+                }, 
+                "failed": false, 
+                "invocation": {
+                    "module_args": {
+                        "allow_downgrade": false, 
+                        "conf_file": null, 
+                        "disable_gpg_check": false, 
+                        "disablerepo": null, 
+                        "enablerepo": null, 
+                        "exclude": null, 
+                        "install_repoquery": true, 
+                        "installroot": "/", 
+                        "list": null, 
+                        "name": [
+                            "nginx"
+                        ], 
+                        "security": false, 
+                        "skip_broken": false, 
+                        "state": "latest", 
+                        "update_cache": false, 
+                        "validate_certs": true
+                    }
+                }, 
+                "item": [
+                    "nginx"
+                ], 
+                "msg": "", 
+                "rc": 0, 
+                "results": [
+                    "All packages providing nginx are up to date"
+                ]
+            }
+        ]
+    }
+}
+2021-12-02 16:24:53,022 p=31204 u=root |  TASK [nginx : check] ************************************************************************************************************************************************************************************************************
+2021-12-02 16:24:53,084 p=31204 u=root |  [nginx : check]
+"各サーバで「nginx -v」を実行し、nginxが正しくインストールされていることが確認できたら進みましょう"
+:
+2021-12-02 16:24:54,515 p=31204 u=root |  ok: [web04]
+2021-12-02 16:24:54,522 p=31204 u=root |  TASK [nginx : 公開用ディレクトリを作成] *****************************************************************************************************************************************************************************************************
+2021-12-02 16:24:54,871 p=31204 u=root |  ok: [web04]
+2021-12-02 16:24:54,879 p=31204 u=root |  TASK [nginx : topページ（index.html）を公開ディレクトリに配置] ***********************************************************************************************************************************************************************************
+2021-12-02 16:24:55,718 p=31204 u=root |  ok: [web04]
+2021-12-02 16:24:55,725 p=31204 u=root |  TASK [nginx : default.confを転送] **************************************************************************************************************************************************************************************************
+2021-12-02 16:24:56,106 p=31204 u=root |  changed: [web04]
+2021-12-02 16:24:56,114 p=31204 u=root |  TASK [nginx : default.confのbackup] **********************************************************************************************************************************************************************************************
+2021-12-02 16:24:56,471 p=31204 u=root |  skipping: [web04]
+2021-12-02 16:24:56,479 p=31204 u=root |  TASK [nginx : default.confの設定(listen-port指定)] ***********************************************************************************************************************************************************************************
+2021-12-02 16:24:56,839 p=31204 u=root |  skipping: [web04]
+2021-12-02 16:24:56,847 p=31204 u=root |  TASK [nginx : httpdが存在しているかの確認] *************************************************************************************************************************************************************************************************
+2021-12-02 16:24:57,183 p=31204 u=root |  ok: [web04]
+2021-12-02 16:24:57,191 p=31204 u=root |  TASK [nginx : 実行結果（httpd存在性）] ***************************************************************************************************************************************************************************************************
+2021-12-02 16:24:57,259 p=31204 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "failed": false, 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2021-12-02 16:24:57,267 p=31204 u=root |  TASK [nginx : httpdが存在している場合はサービスを停止] *******************************************************************************************************************************************************************************************
+2021-12-02 16:24:57,285 p=31204 u=root |  skipping: [web04]
+2021-12-02 16:24:57,292 p=31204 u=root |  TASK [nginx : 実行結果（httpd停止）] ****************************************************************************************************************************************************************************************************
+2021-12-02 16:24:57,361 p=31204 u=root |  ok: [web04] => {
+    "msg": {
+        "changed": false, 
+        "skip_reason": "Conditional result was False", 
+        "skipped": true
+    }
+}
+2021-12-02 16:24:57,368 p=31204 u=root |  TASK [nginx : nginxの起動] *********************************************************************************************************************************************************************************************************
+2021-12-02 16:24:57,755 p=31204 u=root |  ok: [web04]
+2021-12-02 16:24:57,757 p=31204 u=root |  PLAY RECAP **********************************************************************************************************************************************************************************************************************
+2021-12-02 16:24:57,757 p=31204 u=root |  web01                      : ok=18   changed=1    unreachable=0    failed=0   
+2021-12-02 16:24:57,757 p=31204 u=root |  web02                      : ok=18   changed=1    unreachable=0    failed=0   
+2021-12-02 16:24:57,757 p=31204 u=root |  web03                      : ok=17   changed=1    unreachable=0    failed=0   
+2021-12-02 16:24:57,758 p=31204 u=root |  web04                      : ok=17   changed=1    unreachable=0    failed=0   

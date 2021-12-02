@@ -1,6 +1,7 @@
 ---
 - name: nginx_auto_deploy
   hosts: all
+  serial: 1
   
   roles:
     - nginx
